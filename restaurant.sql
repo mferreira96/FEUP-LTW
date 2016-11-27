@@ -4,7 +4,7 @@ CREATE TABLE user (
   lastName TEXT,
   email TEXT,
   photo TEXT,
-  password TEXT,
+  password TEXT
 );
 
 
@@ -13,13 +13,12 @@ CREATE TABLE restaurant (
   name TEXT,
   description TEXT,
   rate INTEGER,
-  photo TEXT,
+  photo TEXT
 );
 
 
 CREATE TABLE review (
-  id INTEGER PRIMARY KEY
+  id INTEGER PRIMARY KEY,
   rate INTEGER,
-  comment TEXT,
-
+  comment TEXT
 );
