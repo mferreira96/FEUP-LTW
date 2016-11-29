@@ -1,9 +1,9 @@
 CREATE TABLE user (
   id INTEGER PRIMARY KEY,
-  firstName TEXT,
-  lastName TEXT,
+  userName TEXT,
+  name TEXT,
   email TEXT,
-  photo TEXT,
+  idPhoto INTEGER REFERENCES image,
   password TEXT
 );
 
@@ -13,12 +13,20 @@ CREATE TABLE restaurant (
   name TEXT,
   description TEXT,
   rate INTEGER,
-  photo TEXT
+  idPhoto INTEGER REFERENCES image,
+  idOwner INTEGER REFERENCES user
 );
 
 
 CREATE TABLE review (
   id INTEGER PRIMARY KEY,
+  idRestaurant INTEGER REFERENCES restaurant,
   rate INTEGER,
   comment TEXT
 );
+
+
+CREATE TABLE image(
+  id INTEGER PRIMARY KEY,
+  name TEXT
+)
