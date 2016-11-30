@@ -14,19 +14,26 @@ CREATE TABLE restaurant (
   description TEXT,
   rate INTEGER,
   idPhoto INTEGER REFERENCES image,
-  idOwner INTEGER REFERENCES user
+  idOwner INTEGER REFERENCES user,
+  local TEXT
 );
 
+
+CREATE TABLE restaurantOwners(
+  idRestaurant INTEGER REFERENCES restaurant,
+  idUser INTEGER REFERENCES user
+
+);
 
 CREATE TABLE review (
   id INTEGER PRIMARY KEY,
   idRestaurant INTEGER REFERENCES restaurant,
-  rate INTEGER,
-  comment TEXT
+  idUser INTEGER REFERENCES user,
+  rate INTEGER,  comment TEXT
 );
 
 
 CREATE TABLE image(
   id INTEGER PRIMARY KEY,
   name TEXT
-)
+);
