@@ -1,0 +1,9 @@
+<?php
+  include_once('../header.php');
+
+  include_once('owner_menu.php');
+  include_once('restaurant_above_tabs.php');
+  include_once('restaurant_tabs/restaurant_links_to_tabs.php');
+
+  include_once('../footer.php');
+?>
