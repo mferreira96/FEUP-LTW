@@ -66,6 +66,29 @@
     }
 
 
+    /*
+      Get the owners of the restaurant
+    */
 
+    function getOwnersId($idRestaurant){
+      global $dbh;
+
+      $stm = $dbh->prepare('SELECT idUser FROM restaurantOwners WHERE idRestaurant = ?');
+      $stm->execute(array($idRestaurant));
+      return $stm->fetchAll();
+
+    }
+
+    /*
+    Adiciona um Owner a um determinado restaurante
+    */
+
+    function addOwner($idRestaurant, $idUser){
+      global $dbh;
+
+      $stm = $dbh->prepare('INSERT INTO restaurantOwners(idRestaurant, idUser) VALUES(?,?)');
+      $stm->execute(array($idRestaurant, $idUser));
+
+    }
 
  ?>
