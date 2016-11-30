@@ -8,4 +8,3 @@
 		<header>
 			<h1><a href="index.php">Title</a></h1>
 		</header>
-	</body>
