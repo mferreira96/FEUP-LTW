@@ -6,7 +6,7 @@
    include_once('../owner/owner_menu.php');
  }else{
    if($userType === '1'){
-     echo 'under construction';
+     include_once('../reviewer/reviewer_menu.php');
    }else{
      echo 'No such user';
      //throw new Exception("No such user", 1);
