@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS review;
 DROP TABLE IF EXISTS image;
 
 CREATE TABLE user (
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   userName TEXT,
   name TEXT,
   email TEXT,
@@ -19,7 +19,7 @@ INSERT INTO user VALUES(NULL, 'miniChef', 'João', 'seiCozinhar@gmail.com', 3, '
 
 
 CREATE TABLE restaurant (
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT,
   description TEXT,
   rate INTEGER,
@@ -39,18 +39,26 @@ CREATE TABLE restaurantOwners(
 INSERT INTO restaurantOwners VALUES(1,1);
 
 CREATE TABLE review (
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   idRestaurant INTEGER REFERENCES restaurant,
   idUser INTEGER REFERENCES user,
-  rate INTEGER,  comment TEXT
+  rate INTEGER,
+  comment TEXT
 );
 
 
-CREATE TABLE image(
-  id INTEGER PRIMARY KEY,
+CREATE TABLE image (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT
 );
 
 INSERT  INTO image VALUES(NULL,'marcelo.png');
 INSERT  INTO image VALUES(NULL,'taskArte.png');
 INSERT  INTO image VALUES(NULL,'joao.png');
+
+
+CREATE TABLE reply(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  idReview INTEGER REFERENCES review,
+  answer TEXT
+);
