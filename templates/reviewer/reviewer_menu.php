@@ -10,6 +10,6 @@
         </ul>
     </div>
       <li><a>Profile</a></li>
-      <li><a>Logout</a></li>
+      <li><a href="logout.php">Logout</a></li>
   </ul>
 </div>
