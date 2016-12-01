@@ -1,4 +1,4 @@
-<form action ="restaurant_form_test.php" method="post">
+<form action ="restaurant_form_test.php" method="post" enctype="multipart/form-data>
   <label for ="restaurant_name">Name</label>
   <input type="text" name="Name" id ="restaurant_name" required="required">
   <label for ="restaurant_type_of_food">Type of food</label>
@@ -25,5 +25,9 @@
   </div>
   <label for="restaurant_link_to_website">Link to the website</label>
   <input type="text" name="restaurant_link_to_website" id="restaurant_link_to_website">
+  <label for ="restaurant_comment">Comment</label>
+  <textarea id="restaurant_comment" rows="4" cols="50"></textarea>
+  <label for ="restaurant_picture">Picture of restaurant</label>
+  <input type="file" name="restaurant_picture" id="restaurant_picture"></input>
 <input type="submit" value="Send">
 </form>
