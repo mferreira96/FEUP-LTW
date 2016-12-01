@@ -23,6 +23,8 @@
     <label for ="restaurant_address_postcode">Postcode</label>
     <input type="text" name="postcode" id="restaurant_address_postcode">   <!-- just number accepted, has to be implemented-->
   </div>
+  <label for ="opening_hours">Opening hours</label>
+  <input type="text" name="opening_hours" id="opening_hours">
   <label for="restaurant_link_to_website">Link to the website</label>
   <input type="text" name="restaurant_link_to_website" id="restaurant_link_to_website">
   <label for ="restaurant_comment">Comment</label>
