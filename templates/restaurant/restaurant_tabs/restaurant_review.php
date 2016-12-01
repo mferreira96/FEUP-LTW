@@ -1,5 +1,5 @@
 <div id="profile_picture">
-  <img src="../../pics/blank-profile-picture.png" alt="profile_picture" width="100" height="100">
+  <img src="../../../pics/blank-profile-picture.png" alt="profile_picture" width="100" height="100">
 </div>
 
 <div id="name">
