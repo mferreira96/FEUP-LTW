@@ -1,4 +1,4 @@
-  <div id="menu_owner">
+  <nav id="menu_owner">
     <ul>
       <div id ="my_restaurants">
         <li><a>My Restaurants</a></li>    <!-- inserting an restaurant a "sub-li" should be created -->
@@ -15,4 +15,4 @@
         <li><a>Profile</a></li>
         <li><a href="logout.php">Logout</a></li>
     </ul>
-  </div>
+  </nav>

@@ -1,4 +1,4 @@
-<div id="menu_reviewer">
+<nav id="menu_reviewer">
   <ul>
     <div id ="search_restaurant">
 
@@ -12,4 +12,4 @@
       <li><a>Profile</a></li>
       <li><a href="logout.php">Logout</a></li>
   </ul>
-</div>
+</nav>

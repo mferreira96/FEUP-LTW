@@ -14,14 +14,17 @@
   <input type="text" name="type_of_food_others" id="restaurant_type_of_food_others"></input> <!-- should appear if others was selected-->
   <label for ="restaurant_address">Address</label>
   <div id="restaurant_address">
-    <label for ="restaurant_address_street">Street</label>
-    <input type="text" name="street" id="restaurant_address_street">
-    <label for ="restaurant_address_number">Number</label>
-    <input type="text" name="number" id="restaurant_address_number">
-    <label for ="restaurant_address_city">Address</label>
-    <input type="text" name="city" id="restaurant_address_city">
-    <label for ="restaurant_address_postcode">Postcode</label>
-    <input type="text" name="postcode" id="restaurant_address_postcode">   <!-- just number accepted, has to be implemented-->
+    <fieldset>
+      <legend>Address</legend>
+      <label for ="restaurant_address_street">Street</label>
+      <input type="text" name="street" id="restaurant_address_street">
+      <label for ="restaurant_address_number">Number</label>
+      <input type="text" name="number" id="restaurant_address_number">
+      <label for ="restaurant_address_city">City</label>
+      <input type="text" name="city" id="restaurant_address_city">
+      <label for ="restaurant_address_postcode">Postcode</label>
+      <input type="text" name="postcode" id="restaurant_address_postcode">   <!-- just number accepted, has to be implemented-->
+    </fieldset>
   </div>
   <label for ="opening_hours">Opening hours</label>
   <input type="text" name="opening_hours" id="opening_hours">
