@@ -5,7 +5,6 @@ DROP TABLE IF EXISTS review;
 DROP TABLE IF EXISTS image;
 
 CREATE TABLE user (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
   userName TEXT,
   name TEXT,
   email TEXT,
@@ -14,8 +13,8 @@ CREATE TABLE user (
 );
 
 
-INSERT INTO user VALUES(NULL, 'masterChef', 'Marcelo', 'estouaqui@gmail.com', 1, '46ed215d4162eb1145147b7e6ffd66ea7891f172'); /* marcelo */
-INSERT INTO user VALUES(NULL, 'miniChef', 'João', 'seiCozinhar@gmail.com', 3, 'a9ee6deeaced800b54d1f5fdfb3ab240e1f359a9'); /*querias*/
+INSERT INTO user VALUES('masterChef', 'Marcelo', 'estouaqui@gmail.com', 1, '46ed215d4162eb1145147b7e6ffd66ea7891f172'); /* marcelo */
+INSERT INTO user VALUES('miniChef', 'João', 'seiCozinhar@gmail.com', 3, 'a9ee6deeaced800b54d1f5fdfb3ab240e1f359a9'); /*querias*/
 
 
 CREATE TABLE restaurant (
@@ -32,7 +31,7 @@ INSERT INTO restaurant VALUES(NULL, 'Taska & Arte', 'O melhor local para comer c
 
 CREATE TABLE restaurantOwners(
   idRestaurant INTEGER REFERENCES restaurant,
-  idUser INTEGER REFERENCES user
+  userName INTEGER REFERENCES user
 
 );
 
@@ -41,7 +40,7 @@ INSERT INTO restaurantOwners VALUES(1,1);
 CREATE TABLE review (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   idRestaurant INTEGER REFERENCES restaurant,
-  idUser INTEGER REFERENCES user,
+  userName INTEGER REFERENCES user,
   rate INTEGER,
   comment TEXT
 );

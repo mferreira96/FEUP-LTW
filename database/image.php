@@ -8,13 +8,13 @@
     return $stm->fetchAll();
   }
 
-  function getImageOfUSer($idUser){
+  function getImageOfUSer($userName){
     global $dbh;
 
     $stm = $dbh->prepare('SELECT * FROM image, user WHERE user.id = ? AND user.idPhoto = image.id ');
-    $stm->execute(array($idUser));
+    $stm->execute(array($userName));
 
-    return $stm->fetch(); 
+    return $stm->fetch();
   }
 
  ?>

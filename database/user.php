@@ -38,7 +38,7 @@
   function addUser($user){
     global $dbh;
 
-    $stm = $dbh->prepare('INSERT INTO user(id,userName,name, email, photo, password) VALUES (NULL,:userN, :name, :email, NULL, :pass)');
+    $stm = $dbh->prepare('INSERT INTO user(userName,name, email, photo, password) VALUES (:userN, :name, :email, NULL, :pass)');
     $stm->bindParam(':userN', $user['userName'], PDO::PARAM_STR);
     $passW = sha1($user['password']);
     $stm->bindParam(':pass', $passW, PDO::PARAM_STR);
@@ -51,11 +51,11 @@
   Get user by Id
   */
 
-  function getUserById($id){
+  function getUserByUserName($userName){
     global $dbh;
 
-    $stm  = $dbh->prepare('SELECT * FROM user WHERE id = ?');
-    $stm->execute(array($id));
+    $stm  = $dbh->prepare('SELECT * FROM user WHERE userName = ?');
+    $stm->execute(array($userName));
 
     return $stm->fetch();
 
