@@ -11,8 +11,8 @@
        //throw new Exception("No such user", 1);
     }
    }
-  echo '<section id="main">';
+  echo '<div class="main">';
     include_once('../templates/restaurant/restaurant_all_results.php');
-  echo '</section>';
+  echo '</div>';
   include_once('../templates/footer.php');
 ?>

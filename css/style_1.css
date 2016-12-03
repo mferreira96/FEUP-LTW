@@ -14,6 +14,7 @@ body {
   font-family: verdana, sans-serif;
 }
 
+/*would be nice to select all ankers for hover and acitve*/
 /*menu*/
 
 #menu_reviewer, #menu_owner{
@@ -51,7 +52,7 @@ body {
 
 /*main*/
 
-#main{
+.main{
   margin-top: 20px;
   float: right;
   width: 600px;
@@ -61,4 +62,82 @@ body {
 
 #restaurant_picture{
   margin-top: 20px;
+}
+
+/*search or myrestaurant results*/
+
+.search_one_result{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  height: 200px;
+}
+
+.search_one_result:first-of-type{
+  padding-top: 0;
+}
+
+.search_one_result:last-of-type{
+  border-bottom: none;
+}
+
+#search_result_picture{
+  float: right;
+}
+
+#search_result_name_content{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#search_result_name ~ div{
+  padding-bottom: 20px;
+}
+
+/*add restaurant*/
+
+#add_restaurant_form{
+  border: 0.1px solid black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#add_restaurant > p{
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+#add_restaurant_form{
+  padding: 20px;
+}
+
+#add_restaurant_form *{
+  margin-bottom: 10px;
+}
+
+#restaurant_address *{
+  /*border: 0.1px solid black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;*/
+  margin-left: 20px;
+}
+
+/*logout*/
+
+.logout_message{
+  width: 400px;
+  border: 0.1px solid black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px;7
+  margin-top: 100px;
+  margin-left: 250px;
+}
+
+#link_to_login a{
+  text-decoration: none;
+  color: black;
 }

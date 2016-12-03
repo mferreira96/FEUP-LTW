@@ -1,17 +1,17 @@
 <div class="search_one_result">
   <div id="search_result_picture">
-    <img src="../pics/restaurant_example.png" alt="restaurant_picture" width="320" height="160"> <!--load from database-->
+    <img src="../pics/restaurant_example.png" alt="restaurant_picture" width="200" height="200"> <!--load from database-->
   </div>
 
   <div id="search_result_name">
-    <div id="search_result_name_title">
+    <!--<div id="search_result_name_title">
       Name:
-    </div>
+    </div>-->
     <div id="search_result_name_content">
-      <!--load from database-->
+      <h1>Name</h1><!--load from database-->
     </div>
   </div>
-
+  
   <div id="search_result_score">
     <div id="search_result_score_content">
     <!--load from database-->

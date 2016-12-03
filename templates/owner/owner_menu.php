@@ -7,7 +7,7 @@
 
             </div>
             <div id="add_restaurant"> -->
-              <li><a href="add_restaurant_form.php">Add restaurant</a></li>
+              <li><a href="add_restaurant.php">Add restaurant</a></li>
             <!--</div>
           </ul>
           <div>-->
