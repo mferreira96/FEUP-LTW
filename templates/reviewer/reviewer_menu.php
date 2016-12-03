@@ -9,7 +9,9 @@
           </div>
         </ul>
     </div>
-      <li><a>Profile</a></li>
-      <li><a href="logout.php">Logout</a></li>
+    <li><a>Profile</a></li>
+    <div class="menu_logout">
+      <li><a href="logout_reviewer.php">Logout</a></li>
+    </div>
   </ul>
 </nav>

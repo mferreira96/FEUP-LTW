@@ -12,8 +12,7 @@
     }
    }
   echo '<section id="main">';
-  include_once('../templates/restaurant/restaurant_above_tabs.php');
-  include_once('../templates/restaurant/restaurant_tabs/restaurant_links_to_tabs.php');
+    include_once('../templates/restaurant/restaurant_all_results.php');
   echo '</section>';
   include_once('../templates/footer.php');
 ?>
