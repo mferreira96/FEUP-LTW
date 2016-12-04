@@ -1,12 +1,11 @@
 <?php
 
-
   include_once('../database/connection.php');
   include_once('../database/user.php');
 
 
   try {
-    addUser($_POST);
+    updateUser($_POST);
   } catch (PDOException $e) {
     die($e->getMessage());
   }

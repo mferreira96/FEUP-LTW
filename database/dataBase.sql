@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS review;
 DROP TABLE IF EXISTS image;
 
 CREATE TABLE user (
-  userName TEXT,
+  username TEXT,
   name TEXT,
   email TEXT,
   idPhoto INTEGER REFERENCES image,
@@ -31,7 +31,7 @@ INSERT INTO restaurant VALUES(NULL, 'Taska & Arte', 'O melhor local para comer c
 
 CREATE TABLE restaurantOwners(
   idRestaurant INTEGER REFERENCES restaurant,
-  userName INTEGER REFERENCES user
+  username INTEGER REFERENCES user
 
 );
 
@@ -40,7 +40,7 @@ INSERT INTO restaurantOwners VALUES(1,1);
 CREATE TABLE review (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   idRestaurant INTEGER REFERENCES restaurant,
-  userName INTEGER REFERENCES user,
+  username INTEGER REFERENCES user,
   rate INTEGER,
   comment TEXT
 );

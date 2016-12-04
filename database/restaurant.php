@@ -86,22 +86,34 @@
     function getOwnersId($idRestaurant){
       global $dbh;
 
-      $stm = $dbh->prepare('SELECT userName FROM restaurantOwners WHERE idRestaurant = ?');
+      $stm = $dbh->prepare('SELECT username FROM restaurantOwners WHERE idRestaurant = ?');
       $stm->execute(array($idRestaurant));
       return $stm->fetchAll();
 
     }
 
     /*
-    Adiciona um Owner a um determinado restaurante
+    	add another ownr to a restaurant
     */
 
-    function addOwner($idRestaurant, $userName){
+    function addOwner($idRestaurant, $username){
       global $dbh;
 
-      $stm = $dbh->prepare('INSERT INTO restaurantOwners(idRestaurant, userName) VALUES(?,?)');
-      $stm->execute(array($idRestaurant, $userName));
+      $stm = $dbh->prepare('INSERT INTO restaurantOwners(idRestaurant, username) VALUES(?,?)');
+      $stm->execute(array($idRestaurant, $username));
 
     }
 
+
+    /*
+    Update restaurant
+    */
+
+    function updateRestaurant($variables){
+        global $dbh;
+
+        $stm = $dbh->prepare('UPDATE restaurant SET ?, ?,? WHERE id = ?');
+        $stm->execute(array($variables['name'], $variables['description'], $variables['local'], $variables['id']));
+
+    }
  ?>
