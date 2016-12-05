@@ -5,7 +5,7 @@
   include_once('../database/restaurant.php');
 
 
-if(isset($_POST['submit'])){
+
   $variables = $_POST;
 
   try {
@@ -13,5 +13,5 @@ if(isset($_POST['submit'])){
   } catch (PDOException $e) {
     die($e->getMessage());
   }
-}
+
  ?>

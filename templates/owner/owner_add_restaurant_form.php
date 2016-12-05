@@ -3,7 +3,7 @@
   <form action ="../actions/add_restaurant.php" method="post" enctype="multipart/form-data">
     <div id="add_restaurant_form">
       <label for ="name">Name:</label>
-      <input type="text" name="Name" id ="name" required="required">
+      <input type="text" name="name" id ="name" required="required">
       <br>
       <label for ="restaurant_type_of_food">Type of food:</label>
       <select name="type_of_food" id="restaurant_type_of_food">

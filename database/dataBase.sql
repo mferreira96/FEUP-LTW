@@ -31,8 +31,6 @@ CREATE TABLE restaurant (
 );
 
 
-
-
 CREATE TABLE restaurantOwners(
   idRestaurant INTEGER REFERENCES restaurant,
   username INTEGER REFERENCES user

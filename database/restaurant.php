@@ -19,10 +19,20 @@
     function addRestaurant($values){
       global $dbh;
 
-      $stm = $dbh->prepare('INSERT INTO restaurant(name,street,number,city,postcode,opening_hours,link_to_website) VALUES ( ?,?,?,?,?,?,?)');
+      $stm = $dbh->prepare('INSERT INTO restaurant(name,street,number,city,postcode,opening_hours,link_to_website) VALUES ( ?,?,?,?,?,?, ?)');
+      echo $values['name'];
+      echo $values['street'];
+      echo $values['number'];
+      echo $values['city'];
+      echo $values['postcode'];
+      echo $values['opening_hours'];
+      echo $values['link_to_website'];
+
       $stm->execute(array($values['name'],$values['street'], $values['number'], $values['city'], $values['postcode'],  $values['opening_hours'], $values['link_to_website']));
-    
+
     }
+
+
 
     /*
       Get restaurants by Id
