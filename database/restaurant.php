@@ -19,11 +19,9 @@
     function addRestaurant($values){
       global $dbh;
 
-      $stm = $dbh->prepare('INSERT INTO restaurant(id, name, descriptionm, rate, idPhoto, local) VALUES (NULL, :name, :description, NULL, NULL. :local)');
-      $stm->bindParam(:name, $values['name'], PARAM_STR);
-      $stm->bindParam(:description, $values['description'], PARAM_STR);
-      $stm->bindParam(:local, $values['local'], PARAM_STR);
-      $stm->execute();
+      $stm = $dbh->prepare('INSERT INTO restaurant(name,street,number,city,postcode,opening_hours,link_to_website) VALUES ( ?,?,?,?,?,?,?)');
+      $stm->execute(array($values['name'],$values['street'], $values['number'], $values['city'], $values['postcode'],  $values['opening_hours'], $values['link_to_website']));
+    
     }
 
     /*
@@ -44,11 +42,11 @@
     */
 
 
-    function getRestaurantsByLocation($location){
+    function getRestaurantsByCity($location){
       global $dbh;
 
-      $stm = $dbh->preapre('SELECT * FROM restaurant WHERE location = ?');
-      $stm->execute(array($location));
+      $stm = $dbh->preapre('SELECT * FROM restaurant WHERE city = ?');
+      $stm->execute(array($city));
       return $stm->fetchAll();
 
     }
@@ -56,28 +54,28 @@
     /*
     Get restaurants with a rate higher than X
     */
-
-    function getRestaurantsByRate($number){
+/*
+    function getRestaurantsByRate($numberber){
       global $dbh;
 
       $stm = $dbh->prepare('SELECT * FROM restaurant ORDER BY rate DESC LIMIT ?')
       $stm->execute(array($number));
       return $stm->fetchAll();
     }
-
+*/
 
     /*
     Get restaurant by name
     */
-
-    function getRestaurantsByRate($name){
+/*
+    function getRestaurantsByName($name){
       global $dbh;
 
       $stm = $dbh->prepare('SELECT * FROM restaurant WHERE name = ?')
       $stm->execute(array($name));
       return $stm->fetch();
     }
-
+*/
 
     /*
       Get the owners of the restaurant
@@ -112,8 +110,7 @@
     function updateRestaurant($variables){
         global $dbh;
 
-        $stm = $dbh->prepare('UPDATE restaurant SET ?, ?,? WHERE id = ?');
-        $stm->execute(array($variables['name'], $variables['description'], $variables['local'], $variables['id']));
-
+        $stm = $dbh->prepare('UPDATE restaurant SET ?, ?,?,?,?,?,? WHERE id = ?');
+        $stm->execute(array($values['name'],$values['street'], $values['number'], $values['city'], $values['postcode'],  $values['opening_hours'], $values['link_to_website']));
     }
  ?>

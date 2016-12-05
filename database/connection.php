@@ -1,6 +1,8 @@
 <?php
+  session_start();
+
   try {
-     $dbh = new PDO('sqlite:dataBase.db');
+     $dbh = new PDO('sqlite:../dataBase/dataBase.db');
      $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
      $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch (PDOException $e) {

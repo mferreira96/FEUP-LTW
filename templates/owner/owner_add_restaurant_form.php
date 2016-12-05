@@ -1,9 +1,9 @@
 <div id="add_restaurant">
   <p>ADD RESTAURANT</p>
-  <form action ="restaurant_form_test.php" method="post" enctype="multipart/form-data">
+  <form action ="../actions/add_restaurant.php" method="post" enctype="multipart/form-data">
     <div id="add_restaurant_form">
-      <label for ="restaurant_name">Name:</label>
-      <input type="text" name="Name" id ="restaurant_name" required="required">
+      <label for ="name">Name:</label>
+      <input type="text" name="Name" id ="name" required="required">
       <br>
       <label for ="restaurant_type_of_food">Type of food:</label>
       <select name="type_of_food" id="restaurant_type_of_food">
@@ -41,7 +41,7 @@
       <input type="text" name="opening_hours" id="opening_hours">
       <br>
       <label for="restaurant_link_to_website">Link to the website:</label>
-      <input type="text" name="restaurant_link_to_website" id="restaurant_link_to_website">
+      <input type="text" name="link_to_website" id="restaurant_link_to_website">
       <br>
       <label for ="restaurant_comment">Comment:</label>
       <br>

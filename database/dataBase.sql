@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS restaurant;
-DROP TABLE IF EXISTS restaurantOwners
+DROP TABLE IF EXISTS restaurantOwners;
 DROP TABLE IF EXISTS review;
 DROP TABLE IF EXISTS image;
 
@@ -20,13 +20,17 @@ INSERT INTO user VALUES('miniChef', 'João', 'seiCozinhar@gmail.com', 3, 'a9ee6d
 CREATE TABLE restaurant (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT,
-  description TEXT,
   rate INTEGER,
   idPhoto INTEGER REFERENCES image,
-  local TEXT
+  street TEXT,
+  number TEXT,
+  city TEXT,
+  postcode TEXT,
+  opening_hours TEXT,
+  link_to_website TEXT
 );
 
-INSERT INTO restaurant VALUES(NULL, 'Taska & Arte', 'O melhor local para comer comida portuguesa', NULL, 'Moncao');
+
 
 
 CREATE TABLE restaurantOwners(
