@@ -17,4 +17,11 @@
     return $stm->fetch();
   }
 
+  function addImage($name){
+    global $dbh;
+
+    $stm = $dbh->prepare('INSERT INTO image VALUES(NULL,?)');
+    $stm->execute(array($name));
+  }
+
  ?>

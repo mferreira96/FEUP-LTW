@@ -50,7 +50,7 @@ CREATE TABLE review (
 
 CREATE TABLE image (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT
+  name FILE
 );
 
 INSERT  INTO image VALUES(NULL,'marcelo.png');
