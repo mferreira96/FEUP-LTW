@@ -3,47 +3,37 @@ html {
 }
 
 header{
-  /*background-image: url('../pics/title_5.jpg');*/
+  background-image: url('../pics/potentially_title.png');
   height: 200px;
   background-size: contain;
-  width: 900px;
-  text-align: center;
+  width: 400px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: #79091C;
-  /*#2B2B2B;*/
-}
-
-header a{
-  text-decoration: none;
-  color: white;
-  padding: 50px;
 }
 
 body {
-  background-image: url('../pics/background_1.jpg');
   width: 900px;
   margin: 0px auto;
   font-family: verdana, sans-serif;
-}
-
-.content{
-  background-color:rgba(255, 255, 255, 0.9);
-  margin-top: 0;
 }
 
 /*would be nice to select all ankers for hover and acitve*/
 /*menu*/
 
 #menu_reviewer, #menu_owner{
-  float: left;
   margin-top:20px;
-  margin-left: 10px;
+  border: 1px solid black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
 #menu_reviewer a, #menu_owner a{
   text-decoration: none;
   color: black;
+
+
 }
 
 #menu_reviewer a:hover , #menu_owner a:hover{
@@ -56,13 +46,10 @@ body {
 
 #menu_reviewer li, #menu_owner li{
   color: black;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid black;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  width: 250px;
+  padding:10px;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
 }
 
 #menu_logout{
@@ -71,41 +58,22 @@ body {
 
 /*main*/
 
-.main_menu_oriented{
-  margin-top: 20px;
-  display: block;
-  margin-left: 250px;
-  width: 600px;
-}
-
 .main{
-  display: block;
-  padding: 20px;
-  padding-left:0;
-  margin-left: 300px;
-  width: auto;
-}
-
-/*add_restaurant form*/
-
-#add_restaurant{
-  background-color:rgba(255, 255,255, 1);
-}
-
-/*above tabs*/
-
-#restaurant_above_tabs{
-  margin-left: 300px;
-}
-
-#restaurant_name{
-  padding: 20px;
+  margin-top: 20px;
+  width: 900px;
 }
 
 /*restaurant*/
 
 #restaurant_picture{
-  margin-bottom: 20px;
+  float: right;
+  margin: 20px;
+  margin-top: 5px;
+}
+
+#restaurant_name{
+  text-align: center;
+  margin: 20px auto;
 }
 
 /*tabs*/
@@ -113,18 +81,6 @@ body {
 .tabs{
   display: inline-block;
   width: 100%;
-}
-
-.tabs_content{
-  border: 1px solid white;
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-top-right-adius: 10px;
-  border-top-right-radius: : 10px;
-  margin-bottom: 20px;
-  border-bottom: none;
-  background-color:rgba(255, 255,255, 1);
-  /*background-color:rgba(001, 001,001, 0.05);*/
-  /*background-color:rgba(255, 255,250, 1);*/
 }
 
 .tab_links:after{
@@ -136,60 +92,71 @@ body {
   margin: 0px 5px;
   list-style:none;
   float: left;
-  width: 135px;
+  width: 140px;
   text-align: center;
-  border-right: 1px solid white;
-}
-
-.tab_links li:last-of-type{
-  border: none;
 }
 
 #restaurant_tabs a{
-  padding: 10px;
+  padding: 10px 15px;
+  padding-bottom:0
   display: inline-block;
   /*border: 1px solid black;
   border-radius:5px 5px 0px 0px;*/
   /*font-weight:600;*/
   color: black;
-  transition: all linear 0.15s;
-  text-decoration: none;
-  padding-left: 0;
-  margin-left: 0;
+  transition:all linear 0.15s;
+  text-decoration:none;
+  margin-top: 20px;
 }
 
 #restaurant_tabs a:hover{
   color:grey;
 }
 
+#restaurant_tabs a{
+  padding-left:0;
+  margin-left:0;
+}
+
+.restaurant_tabs_active, #restaurant_all_reviews{
+  border: 1px solid black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  clear: left;
+  display: block;
+  margin-bottom: 20px;
+  height: 400px;
+  padding: 20px;
+}
+
 .tabs_active a, .tabs_active a:hover {
   color: black !important; /*why is it possible to change the backgroundcolor, but not the color!?*/
   font-weight:600;
-
-}
-.restaurant_tabs_active{
-  border: 1px solid white;
-  clear: left;
-  display: block;
-  margin-bottom: 20px;
-  height: 400px;
-  padding: 20px;
 }
 
 .restaurant_tabs_content {
-  border: 1px solid white;
-  clear: left;
-  display: block;
-  margin-bottom: 20px;
-  height: 400px;
-  padding: 20px;
-  /*opacity: 1.0 !important;*/
   display:none;
 }
 
 /*tabs content style each*/
 #restaurant_info li{
   padding-bottom: 10px;
+}
+
+/*tabs reviews*/
+#profile_picture{
+  float: right;
+}
+
+#one_review{
+  border-bottom: 1px solid black;
+  padding: 20px;
+
+}
+
+#review_rating{
+  clear:left;<
 }
 
 /*search or myrestaurant results*/
@@ -256,15 +223,13 @@ body {
 
 .logout_message{
   width: 400px;
-  border: 0.1px solid white;
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-top-right-radius: 10px;
-  border-top-right-radius: 10px;
+  border: 0.1px solid black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   padding: 20px;
-  /*margin-top: 100px;*/
+  margin-top: 100px;
   margin-left: 250px;
-  background-color:rgba(255, 255,255, 1);
-
 }
 
 #link_to_login a{

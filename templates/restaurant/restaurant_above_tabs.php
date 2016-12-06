@@ -1,7 +1,9 @@
-<div id="restaurant_name">
-  <h1>"Name of restaurant"</h1>
-</div>
+<div id="restaurant_above_tabs">
+  <div id="restaurant_name">
+    <h1>Name of restaurant</h1>
+  </div>
 
-<div id="restaurant_picture">
-  <img src="../pics/restaurant_example.png" alt="restaurant_picture" width="320" height="160"> <!---->
+  <div id="restaurant_picture">
+   <img src="../pics/restaurant_example_2.png" alt="restaurant_picture" width="400" height="200">
+  </div>
 </div>
