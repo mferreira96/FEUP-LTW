@@ -2,13 +2,13 @@ DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS restaurant;
 DROP TABLE IF EXISTS restaurantOwners;
 DROP TABLE IF EXISTS review;
-DROP TABLE IF EXISTS image;
+DROP TABLE IF EXISTS image_user;
+DROP TABLE IF EXISTS image_restaurant;
 
 CREATE TABLE user (
   username TEXT,
   name TEXT,
   email TEXT,
-  idPhoto INTEGER REFERENCES image,
   password TEXT
 );
 
@@ -21,7 +21,6 @@ CREATE TABLE restaurant (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT,
   rate INTEGER,
-  idPhoto INTEGER REFERENCES image,
   street TEXT,
   number TEXT,
   city TEXT,
@@ -34,7 +33,6 @@ CREATE TABLE restaurant (
 CREATE TABLE restaurantOwners(
   idRestaurant INTEGER REFERENCES restaurant,
   username INTEGER REFERENCES user
-
 );
 
 INSERT INTO restaurantOwners VALUES(1,1);
@@ -48,14 +46,18 @@ CREATE TABLE review (
 );
 
 
-CREATE TABLE image (
+CREATE TABLE image_user(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name FILE
+  username INTEGER REFERENCES user,
+  name TEXT
 );
 
-INSERT  INTO image VALUES(NULL,'marcelo.png');
-INSERT  INTO image VALUES(NULL,'taskArte.png');
-INSERT  INTO image VALUES(NULL,'joao.png');
+CREATE TABLE image_restaurant(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  idRestaurant INTEGER REFERENCES restaurant,
+  name TEXT
+);
+
 
 
 CREATE TABLE reply(

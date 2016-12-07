@@ -1,27 +1,35 @@
 <<?php
 
-  function getImagesOfRestaurant($idRestaurant){
-    global $dbh;
+function getImageOfRestaurant($idRestaurant){
+  global $dbh;
 
-    $stm = $dbh->prepare('SELECT * FROM image, restaurant WHERE restaurant.id = ? AND image.id = restaurant.idPhoto');
-    $stm->execute(array($idRestaurant));
-    return $stm->fetchAll();
-  }
+  $stm = $dbh->prepare('SELECT * FROM image_restaurant WHERE idRestaurant = ?');
+  $stm->execute(array($idRestaurant));
+
+  return $stm->fetchAll();
+}
 
   function getImageOfUSer($username){
     global $dbh;
 
-    $stm = $dbh->prepare('SELECT * FROM image, user WHERE user.id = ? AND user.idPhoto = image.id ');
+    $stm = $dbh->prepare('SELECT * FROM image_user WHERE username = ?');
     $stm->execute(array($username));
 
     return $stm->fetch();
   }
 
-  function addImage($name){
+  function addImageRestaurant($name,$idRestaurant){
     global $dbh;
 
-    $stm = $dbh->prepare('INSERT INTO image VALUES(NULL,?)');
-    $stm->execute(array($name));
+    $stm = $dbh->prepare('INSERT INTO image_restaurant VALUES(NULL,?,?)');
+    $stm->execute(array($idRestaurant, $name));
+  }
+
+  function addImageUser($name,$username){
+    global $dbh;
+
+    $stm = $dbh->prepare('INSERT INTO image_user VALUES(NULL,?,?)');
+    $stm->execute(array($username, $name));
   }
 
  ?>
