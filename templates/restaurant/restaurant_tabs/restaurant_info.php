@@ -1,12 +1,10 @@
+
 <div id="restaurant_info" class="restaurant_tabs_active">
   <ul>
-    <li><a>Type of food:</a></li>
-    <li><a>Adress:</a></li>
-    <li><a>Opening hours:</a></li>
-    <li><a>Comment:</a></li>
-    <li><a>Link to Website:</a></li>
+    <li><a>Type of food: </a><?=$restaurant['type_of_food']?></li>
+    <li><a>Adress: </a><?=$restaurant['street'].', '.$restaurant['city'].', '.$restaurant['postcode'] ?></li>
+    <li><a>Opening hours: </a><?=$restaurant['opening_hours']?></li>
+    <li><a>Comment: </a><?=$restaurant['comment']?></li>
+    <li><a>Link to Website: </a><a<?=$restaurant['link_to_website']?>></a></li>
   </ul>
-<!--  <div id="restaurant_picture">
-   <img src="../pics/restaurant_example_2.png" alt="restaurant_picture" width="320" height="160">
- </div>-->
 </div>

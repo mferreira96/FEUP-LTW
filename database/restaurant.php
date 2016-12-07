@@ -35,7 +35,7 @@
 
       $stm = $dbh->prepare('SELECT * FROM restaurant WHERE id = ?');
       $stm->execute(array($id));
-      return $stm->fetchAll();
+      return $stm->fetch();
 
     }
 

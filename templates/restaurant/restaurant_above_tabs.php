@@ -1,6 +1,7 @@
+
 <div id="restaurant_above_tabs">
   <div id="restaurant_name">
-    <h1>Name of restaurant</h1>
+    <h1><?= $restaurant['name'] ?></h1>
   </div>
 
   <div id="restaurant_picture">

@@ -13,7 +13,14 @@
       }
      }
 
-    include_once('../templates/restaurant/restaurant_above_tabs.php');
+  include_once('../database/connection.php');
+  include_once('../database/restaurant.php');
+
+  $id = $_GET['id'];
+  $restaurant = getRestaurantById($id);
+
+
+  include_once('../templates/restaurant/restaurant_above_tabs.php');
     echo '<div class="main_menu_oriented">';
       include_once('../templates/restaurant/restaurant_tabs/restaurant_tabs_content.php');
     echo '</div>';
