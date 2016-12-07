@@ -13,8 +13,8 @@ CREATE TABLE user (
 );
 
 
-INSERT INTO user VALUES('masterChef', 'Marcelo', 'estouaqui@gmail.com', 1, '46ed215d4162eb1145147b7e6ffd66ea7891f172'); /* marcelo */
-INSERT INTO user VALUES('miniChef', 'João', 'seiCozinhar@gmail.com', 3, 'a9ee6deeaced800b54d1f5fdfb3ab240e1f359a9'); /*querias*/
+INSERT INTO user VALUES('masterChef', 'Marcelo', 'estouaqui@gmail.com', '46ed215d4162eb1145147b7e6ffd66ea7891f172'); /* marcelo */
+INSERT INTO user VALUES('miniChef', 'João', 'seiCozinhar@gmail.com', 'a9ee6deeaced800b54d1f5fdfb3ab240e1f359a9'); /*querias*/
 
 
 CREATE TABLE restaurant (

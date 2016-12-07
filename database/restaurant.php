@@ -7,7 +7,7 @@
     function getAllRestaurants(){
       global $dbh;
 
-      $stm = $dbh->prepare('SELECT * FROM restaurant ');
+      $stm = $dbh->prepare('SELECT * FROM restaurant');
       $stm->execute();
       return $stm->fetchAll();
     }
