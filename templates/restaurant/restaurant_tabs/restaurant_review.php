@@ -1,3 +1,7 @@
+
+<!--Penso que este ficheiro ja nao e necessario o codigo pode ser usado para fazer o form de adicionar umaa review -->
+
+
 <div id="one_review">
   <div id="profile_picture">
     <img src="../pics/blank-profile-picture.png" alt="profile_picture" width="100" height="100">

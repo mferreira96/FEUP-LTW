@@ -49,12 +49,17 @@ CREATE TABLE review (
   comment TEXT
 );
 
+INSERT INTO review VALUES(NULL,1,'miniChef', 4, 'Good space and wonderfull food');
+INSERT INTO review VALUES(NULL,1,'masterChef', 5, 'The best food i had ever tasted');
 
 CREATE TABLE image_user(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   username INTEGER REFERENCES user,
   name TEXT
 );
+
+INSERT INTO image_user VALUES(NULL,1,'gallery_example.png');
+INSERT INTO image_user VALUES(NULL,2,'random_2.png');
 
 CREATE TABLE image_restaurant(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -72,8 +77,7 @@ CREATE TABLE reply(
 );
 
 
-
-CREATE TRIGGER update_reate AFTER INSERT ON review
+CREATE TRIGGER update_rate AFTER INSERT ON review
 BEGIN
 	UPDATE restaurant SET rate = (
 		SELECT AVG(rating) FROM restaurant
