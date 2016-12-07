@@ -3,7 +3,7 @@
   include_once('../database/connection.php');
   include_once('../database/user.php');
 
- /* if(isset($_POST['submit'])){
+  if(isset($_POST['submit'])){
     $passwordFlag = verifyPassword($_POST['username'],$_POST['password']);
 
     // palavra passe correta
@@ -15,11 +15,11 @@
     else{
       // palavra passe incorreta
     }
-  }*/
+  }
   
-  $_SESSION['username'] = $_POST['username'];            // store the username
+  /*$_SESSION['username'] = $_POST['username'];            // store the username
  
-   header('Location: ' . $_SERVER['HTTP_REFERER']);
+   header('Location: ' . $_SERVER['HTTP_REFERER']);*/
 
 
  ?>
