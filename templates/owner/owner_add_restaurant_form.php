@@ -15,7 +15,7 @@
       </select>
       <br>
       <label for ="restaurant_type_of_food_others">Type of food:</label>
-      <input type="text" name="type_of_food_others" id="restaurant_type_of_food_others"></input> <!-- should appear if others was selected-->
+      <input type="text" name="type_of_food" id="restaurant_type_of_food_others"></input> <!-- should appear if others was selected-->
       <br>
       <!--<label for ="restaurant_address">Address</label>
       <br>-->

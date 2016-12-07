@@ -12,7 +12,7 @@
        ?>
          <article class="listrestaurant">
             <div id="search_result_picture">
-              <img src="<?="../pics/". $res[0]['name']?>"  alt="restaurant_picture" width="200" height="200"> <!--load from database-->
+              <img src="<?="../pics/". $res[0]['name']?>"  alt="restaurant_picture" width="150" height="150"> 
             </div>
 
             <div id="search_result_name_content">
@@ -20,7 +20,7 @@
             </div>
 
             <div id="search_result_type_of_food">
-              <div id="search_result_type_of_food_title">Type of food:</div>
+              Type of food:<?=$restaurant['type_of_food']?>
             </div></br>
 
             <div id="search_result_city_title">
@@ -32,6 +32,8 @@
             </div></br>
 
             <input type="button" id="search_results_see_more" value="see more">
+            </br>
+            </br>
           </article>
       <?php } ?>
 </section>

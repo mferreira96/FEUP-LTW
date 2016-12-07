@@ -26,9 +26,13 @@ CREATE TABLE restaurant (
   city TEXT,
   postcode TEXT,
   opening_hours TEXT,
-  link_to_website TEXT
+  link_to_website TEXT,
+  type_of_food TEXT,
+  comment TEXT
 );
 
+INSERT INTO restaurant(name,rate,street,number,city,type_of_food,comment) VALUES('Taskinha',0, 'rua miranda',3, 'Porto','portugues', 'Muito boa comida portuguesa');
+INSERT INTO restaurant(name,rate,street,number,city,type_of_food,comment) VALUES('Bitoque',0, 'rua vasco da gama',2, 'Lisboa','portugues', 'A melhor comida de Lisboa');
 
 CREATE TABLE restaurantOwners(
   idRestaurant INTEGER REFERENCES restaurant,
@@ -58,7 +62,8 @@ CREATE TABLE image_restaurant(
   name TEXT
 );
 
-
+INSERT INTO image_restaurant VALUES(NULL,1,'random_1.png');
+INSERT INTO image_restaurant VALUES(NULL,2,'random_2.png');
 
 CREATE TABLE reply(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
