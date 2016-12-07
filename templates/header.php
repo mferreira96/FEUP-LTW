@@ -8,6 +8,7 @@
 						integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
 						crossorigin="anonymous"></script>
 		<script type="text/javascript" src="../templates/jquery/tabs.js"></script>
+		<script type="text/javascript" src="../templates/jquery/maps.js"></script>
 		<link rel="stylesheet" href="../css/reset.css">
 		<link rel="stylesheet" href="../css/style_1.css">
 	</head>

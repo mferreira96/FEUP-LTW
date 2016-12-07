@@ -167,16 +167,8 @@ body {
   font-weight:600;
 
 }
-.restaurant_tabs_active{
-  border: 1px solid white;
-  clear: left;
-  display: block;
-  margin-bottom: 20px;
-  height: 400px;
-  padding: 20px;
-}
 
-.restaurant_tabs_content {
+.restaurant_tabs_content, .restaurant_tabs_active {
   border: 1px solid white;
   clear: left;
   display: block;
@@ -184,12 +176,17 @@ body {
   height: 400px;
   padding: 20px;
   /*opacity: 1.0 !important;*/
-  display:none;
+  /*display:none;*/
 }
 
 /*tabs content style each*/
 #restaurant_info li{
   padding-bottom: 10px;
+}
+
+#maps{
+  height: 400px;
+  width: 100%;
 }
 
 /*search or myrestaurant results*/
@@ -229,6 +226,7 @@ body {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  margin-top: 20px;
 }
 
 #add_restaurant > p{
