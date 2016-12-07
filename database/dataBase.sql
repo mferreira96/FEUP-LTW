@@ -65,3 +65,16 @@ CREATE TABLE reply(
   idReview INTEGER REFERENCES review,
   answer TEXT
 );
+
+
+
+CREATE TRIGGER update_reate AFTER INSERT ON review
+BEGIN
+	UPDATE restaurant SET rate = (
+		SELECT AVG(rating) FROM restaurant
+		JOIN reviews ON (restaurant.id = NEW.idRestaurant)
+		GROUP BY (idRestaurant)
+		HAVING (idRestaurant = NEW.idRestaurant)
+	)
+	WHERE (restaurant.id = NEW.idRestaurant);
+END;
