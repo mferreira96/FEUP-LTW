@@ -8,7 +8,6 @@
 
     $reviews =  getAllReviewsFromRestaurant($restaurant['id']);
 
-    echo $reviews[0];
   echo '</div>';    //part two needed around results to display them
 ?>
 
