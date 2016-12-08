@@ -1,12 +1,15 @@
 <?php
 
-include_once('../../database/connection.php');
-include_once('../../database/restaurant.php');
-include_once('../../database/rebiew.php');
+  echo '<div id="restaurant_all_reviews" class="restaurant_tabs_content">'; //part one needed around results to display them
 
-$reviews =  getAllReviewsFromRestaurant($restaurant['id']);
+    include_once('../database/connection.php');
+    include_once('../database/restaurant.php');
+    include_once('../database/review.php');
 
-echo $revies[0];
+    $reviews =  getAllReviewsFromRestaurant($restaurant['id']);
+
+    echo $reviews[0];
+  echo '</div>';    //part two needed around results to display them
 ?>
 
 <section class="listReviews">
@@ -29,4 +32,4 @@ echo $revies[0];
           </div>
         </article>
       <?php } ?>
-</div>
+</section>
