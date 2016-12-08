@@ -4,7 +4,9 @@ $(document).ready(function(){
         var currentValue = $(this).attr('href');
         $(currentValue).show().siblings().hide();
         $(this).parent('li').addClass('tabs_active').siblings().removeClass('tabs_active');
-
+        if(currentValue == '#restaurant_maps') {
+          initMap();
+        }
         e.preventDefault();
   });
 });
