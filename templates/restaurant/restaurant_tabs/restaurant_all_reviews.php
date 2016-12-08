@@ -21,9 +21,13 @@
             Name: <?=$review['username']?>
           </div>
 
+          <br>
+
           <div id="review_rating">
             Rate: <?=$review['rate']?>
           </div>
+
+          <br>
 
           <div id="comment">
             Comment: <?=$review['comment']?>

@@ -206,6 +206,34 @@ body {
   height: 300px;
 }
 
+#restaurant_all_reviews{
+  overflow: auto;
+}
+
+.review{
+  border-bottom: 1px solid black;
+  padding: 20px;
+  height: 120px;
+}
+
+.review:last-of-type{
+  border-bottom:none;
+}
+
+#profile_picture{
+  float: left;
+  margin-right: 20px;
+}
+
+#name, #review_rating, #comment{
+  margin-left: 60px;
+}
+
+#name, #review_rating{
+  padding-bottom: 10px;
+}
+
+
 /*search or myrestaurant results*/
 
 .search_one_result{
