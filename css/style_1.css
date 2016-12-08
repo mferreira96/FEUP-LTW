@@ -11,7 +11,6 @@ header{
   margin-left: auto;
   margin-right: auto;
   background-color: #79091C;
-  /*#2B2B2B;*/
 }
 
 header a{
@@ -84,12 +83,6 @@ body {
   padding-left:0;
   margin-left: 300px;
   width: auto;
-}
-
-/*add_restaurant form*/
-
-#add_restaurant{
-  background-color:rgba(255, 255,255, 1);
 }
 
 /*above tabs*/
@@ -222,11 +215,11 @@ body {
 /*add restaurant*/
 
 #add_restaurant_form{
-  border: 0.1px solid black;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  margin-top: 20px;
+  border: 0.1px solid white;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color:rgba(255, 255,255, 1);
 }
 
 #add_restaurant > p{
@@ -252,7 +245,7 @@ body {
 
 /*logout*/
 
-.logout_message{
+.logout_message, .login_message{
   width: 400px;
   border: 0.1px solid white;
   -webkit-border-top-right-radius: 10px;
@@ -263,6 +256,14 @@ body {
   margin-left: 250px;
   background-color:rgba(255, 255,255, 1);
 
+}
+
+#login_form{
+  margin: 15px 0;
+}
+
+#login_form > input{
+  margin-top: 20px;
 }
 
 #link_to_login a{
