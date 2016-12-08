@@ -172,6 +172,10 @@ body {
   /*display:none;*/
 }
 
+.restaurant_tabs_content{
+  display:none;
+}
+
 /*tabs content style each*/
 #restaurant_info li{
   padding-bottom: 10px;
