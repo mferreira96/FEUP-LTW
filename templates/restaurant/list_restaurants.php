@@ -12,7 +12,7 @@
        ?>
          <article class="listrestaurant">
             <div id="search_result_picture">
-              <img src="<?="../pics/". $res[0]['name']?>"  alt="restaurant_picture" width="150" height="150"> 
+              <img src="<?="../pics/". $res[0]['name']?>"  alt="restaurant_picture" width="150" height="150">
             </div>
 
             <div id="search_result_name_content">
@@ -31,7 +31,10 @@
               Score: <?=$restaurant['rate']?>
             </div></br>
 
-            <input type="button" id="search_results_see_more" value="see more">
+            <div id="search_results_details">
+              <p><a href="restaurant.php">Details</a></p>
+            </div>
+            <!--<input type="button" id="search_results_see_more" value="see more">-->
             </br>
             </br>
           </article>

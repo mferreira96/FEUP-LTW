@@ -32,6 +32,14 @@ body {
 }
 
 /*would be nice to select all ankers for hover and acitve*/
+#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover{
+  color: grey;
+}
+
+#menu_reviewer a , #menu_owner a, #search_results_details a{
+  text-decoration: none;
+  color: black;
+}
 /*menu*/
 
 #menu_reviewer, #menu_owner{
@@ -40,12 +48,7 @@ body {
   margin-left: 10px;
 }
 
-#menu_reviewer a, #menu_owner a{
-  text-decoration: none;
-  color: black;
-}
-
-#menu_reviewer a:hover , #menu_owner a:hover{
+#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover{
   color: grey;
 }
 
@@ -150,10 +153,6 @@ body {
   text-decoration: none;
   padding-left: 0;
   margin-left: 0;
-}
-
-#restaurant_tabs a:hover{
-  color:grey;
 }
 
 .tabs_active a, .tabs_active a:hover {
@@ -263,6 +262,10 @@ body {
 
 #search_result_name ~ div{
   padding-bottom: 20px;
+}
+
+#search_results_details a{
+  font-weight: 600;
 }
 
 /*add restaurant*/
