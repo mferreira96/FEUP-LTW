@@ -27,6 +27,11 @@ function initMap() {
          map: map
        });
 
-      document.getElementByClassName('.restaurant_tabs_content').hide(); //google maps has to be loaded first
+       /*document.getElementsByClassName("restaurant_tabs_content").style.display = "none";*/
+
+      var classes_to_hide = document.getElementsByClassName("restaurant_tabs_content"); //google maps has to be loaded first
+      for(var i = 0; i < classes_to_hide.length; i++){
+        classes_to_hide[i].style.display = "none";
+      };
 
      }
