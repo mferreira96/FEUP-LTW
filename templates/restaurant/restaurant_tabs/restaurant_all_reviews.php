@@ -8,7 +8,6 @@
 
     $reviews =  getAllReviewsFromRestaurant($restaurant['id']);
 
-  echo '</div>';    //part two needed around results to display them
 ?>
 
 <section class="listReviews">
@@ -32,3 +31,7 @@
         </article>
       <?php } ?>
 </section>
+
+<?php
+  echo '</div>';    //part two needed around results to display them
+?>
