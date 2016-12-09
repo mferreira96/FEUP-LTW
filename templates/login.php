@@ -1,6 +1,6 @@
 <div id="login_message" class="login_message">
 
-	<h1>Login</h1>
+	<h3>Login</h1>
 
 	<form action ="../actions/login.php" method="post" enctype="multipart/form-data">
 		<div id="login_form">

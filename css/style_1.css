@@ -4,7 +4,7 @@ html {
 
 header{
   /*background-image: url('../pics/title_5.jpg');*/
-  height: 200px;
+  height: 30vh;
   background-size: contain;
   width: 900px;
   text-align: center;
@@ -28,15 +28,16 @@ body {
 
 .content{
   background-color:rgba(255, 255, 255, 0.9);
-  margin-top: 0;
+  margin-top: 0 !important;
+  min-height: 70vh; /*has to be changed as soon as footer is changed*/
 }
 
 /*would be nice to select all ankers for hover and acitve*/
-#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover{
+#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover{
   color: grey;
 }
 
-#menu_reviewer a , #menu_owner a, #search_results_details a{
+#menu_reviewer a , #menu_owner a, #search_results_details a, .link_to_login a{
   text-decoration: none;
   color: black;
 }
@@ -319,7 +320,7 @@ body {
   margin-left: 20px;
 }
 
-/*logout*/
+/*logout/logou*/
 
 .logout_message, .login_message{
   width: 400px;
@@ -328,10 +329,12 @@ body {
   -moz-border-top-right-radius: 10px;
   border-top-right-radius: 10px;
   padding: 20px;
-  /*margin-top: 100px;*/
   margin-left: 250px;
   background-color:rgba(255, 255,255, 1);
+}
 
+.logout_blank_box{
+  height: 120px;
 }
 
 #login_form{
@@ -345,4 +348,8 @@ body {
 #link_to_login a{
   text-decoration: none;
   color: black;
+}
+
+#login_message h3 {
+  text-align: center;
 }
