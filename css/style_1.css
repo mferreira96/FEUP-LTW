@@ -21,6 +21,7 @@ header a{
 
 body {
   background-image: url('../pics/background_1.jpg');
+  background-attachment: fixed;
   width: 900px;
   margin: 0px auto;
   font-family: verdana, sans-serif;
