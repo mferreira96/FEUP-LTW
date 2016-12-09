@@ -10,7 +10,7 @@
           $res = getImageOfRestaurant($restaurant['id']);
 
        ?>
-         <article class="listrestaurant">
+         <article class="search_one_result">
             <div id="search_result_picture">
               <img src="<?="../pics/". $res[0]['name']?>"  alt="restaurant_picture" width="150" height="150">
             </div>
@@ -20,7 +20,7 @@
             </div>
 
             <div id="search_result_type_of_food">
-              Type of food:<?=$restaurant['type_of_food']?>
+              Type of food: <?=$restaurant['type_of_food']?>
             </div></br>
 
             <div id="search_result_city_title">

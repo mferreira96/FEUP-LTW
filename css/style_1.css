@@ -239,12 +239,26 @@ body {
 
 
 /*search or myrestaurant results*/
+.search_result{
+  background-color:rgba(255, 255,255, 1);
+  border: 1px solid white;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-top-right-adius: 10px;
+  border-top-right-radius: : 10px;
+  padding: 20px;
+  border-bottom: none;
+  max-height: 600px;
+  overflow: auto;
+
+}
 
 .search_one_result{
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid black;
   height: 200px;
+
+
 }
 
 .search_one_result:first-of-type{
@@ -257,6 +271,8 @@ body {
 
 #search_result_picture{
   float: right;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 #search_result_name_content{
