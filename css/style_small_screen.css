@@ -1,0 +1,44 @@
+header{
+  height: 20vh;
+  background-size: contain;
+  /*width: 100vw;*/
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #79091C;
+}
+
+header a{
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-image: url('../pics/background_1.jpg');
+  background-attachment: fixed;
+  margin: 0px auto;
+  font-family: verdana, sans-serif;
+}
+
+.content{
+  background-color:rgba(255, 255, 255, 0.9);
+  margin-top: 0 !important;
+  min-height: 70vh; /*has to be changed as soon as footer is changed*/
+}
+
+/*menu*/
+
+#menu_reviewer, #menu_owner{
+  float: left;
+  margin-top: 10vh;
+  margin-left: 10vw;
+}
+
+#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover{
+  color: grey;
+}
+
+#menu_reviewer a , #menu_owner a, #search_results_details a, .link_to_login a{
+  text-decoration: none;
+  color: black;
+}
