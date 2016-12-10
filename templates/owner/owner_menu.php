@@ -12,7 +12,7 @@
           </ul>
           <div>-->
     <!--  </div>-->
-      <li><a>Profile</a></li>
+      <li><a href="profile.php">Profile</a></li>
       <!--<div class="menu_logout">-->
       <li><a href="logout_owner.php">Logout</a></li>
     <!--  </div>-->
