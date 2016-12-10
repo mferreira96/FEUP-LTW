@@ -1,11 +1,11 @@
-<<?php
+<?php
 
 function getAllImageSOfRestaurants(){
   global $dbh;
 
   $stm = $dbh->prepare('SELECT * FROM image_restaurant');
   $stm->execute();
-  
+
   return $stm->fetchAll();
 }
 

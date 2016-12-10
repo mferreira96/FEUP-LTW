@@ -1,5 +1,6 @@
 $(document).ready(function(){
   //setInfoDefault();
+if($(window).width() >= "900"){
   $('.tabs .tab_links a').on('click', function(e)  {
         var currentValue = $(this).attr('href');
         $(currentValue).show().siblings().hide();
@@ -9,6 +10,8 @@ $(document).ready(function(){
         }
         e.preventDefault();
   });
+}
+
 });
 
 /*function setInfoDefault(){

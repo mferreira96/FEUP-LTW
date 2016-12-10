@@ -1,4 +1,5 @@
 <div id="add_restaurant">
+  <h3>Add restaurant</h3>
   <form action ="../actions/add_restaurant.php" method="post" enctype="multipart/form-data">
     <div id="add_restaurant_form">
       <label for ="name">Name:</label>
