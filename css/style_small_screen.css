@@ -1,7 +1,6 @@
 header{
   height: 20vh;
   background-size: contain;
-  /*width: 100vw;*/
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -16,23 +15,16 @@ header a{
 body {
   background-image: url('../pics/background_1.jpg');
   background-attachment: fixed;
-  /*width: 900px;*/
-  margin: 0px auto;
+  margin: 0 0;
   font-family: verdana, sans-serif;
+  width: 100vw;
 }
 
 .content{
   background-color:rgba(255, 255, 255, 0.9);
-  margin-top: 0 !important;
+  margin: 0 !important;
+  padding: 0;
   min-height: 70vh; /*has to be changed as soon as footer is changed*/
-}
-
-/*menu*/
-
-#menu_reviewer, #menu_owner{
-  float: left;
-  margin-top: 10vh;
-  margin-left: 10vw;
 }
 
 #menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover{
@@ -42,4 +34,274 @@ body {
 #menu_reviewer a , #menu_owner a, #search_results_details a, .link_to_login a{
   text-decoration: none;
   color: black;
+}
+
+/*menu*/
+
+#menu_reviewer, #menu_owner{
+  float: left;
+  margin: 5vh;
+}
+
+#menu_reviewer ul, #menu_owner ul {
+  list-style-type: none;
+}
+
+#menu_reviewer li, #menu_owner li{
+  text-align: center;
+  color: black;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border: 0.1vh solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 90vw;
+}
+
+#menu_logout{
+  border: none;
+}
+
+/*main*/
+
+.main_menu_oriented{
+  padding: 5vh 5vw;
+  display: block;
+}
+
+.main{
+  display: block;
+  padding: 5vh 5vw;
+  width: 90vw;
+}
+
+/*above tabs*/
+
+#restaurant_above_tabs{
+  margin-left: 5vw;
+}
+
+#restaurant_name{
+  padding: 5vh 5vw;
+}
+
+/*tabs*/
+
+.tabs{
+}
+
+.tabs_content{
+  background-color:rgba(255, 255,255, 1);
+}
+
+.tabs_content h3{
+  clear: both;
+  text-align: center;
+  padding: 1vh 0;
+}
+
+.tab_links:after{
+}
+
+.tab_links li{
+  list-style:none;
+  float: left;
+  text-align: center;
+}
+
+.tab_links li:last-of-type{
+  border: none;
+}
+
+#restaurant_tabs a{
+  padding: 2vh 2vw;
+  display: inline-block;
+  color: black;
+  transition: all linear 0.15s;
+  text-decoration: none;
+}
+
+.restaurant_tabs_content, .restaurant_tabs_active {
+  border-bottom: 0.1vh solid black;
+  padding: 2vh 0;
+  clear: left;
+  display: block;
+}
+
+/*tabs content style each*/
+#restaurant_info li{
+}
+
+#maps{
+  height: 50vh;
+}
+
+.pictures_by_reviewers{
+  max-height: 50vh;
+  width: 90vw;
+  overflow: auto;
+}
+
+.pictures_by_reviewers img {
+	height: 10vh;
+  max-width: 15vw;
+  border: solid white;
+  border-width: 0.01vh 0.01vw;
+}
+
+.pictures_by_reviewers img:active {
+	border: solid black;
+  border-width: 0.01vh 0.01vw;
+}
+
+.pic_preview img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+#restaurant_all_reviews{
+}
+
+.review{
+  border-bottom: 0.01vh solid black;
+  padding: 5vh 0;
+  max-height: 100vh;
+}
+
+.review:last-of-type{
+  border-bottom:none;
+}
+
+#profile_picture{
+  float: left;
+  margin-right: 2vw;
+}
+
+#name, #review_rating, #comment{
+}
+
+#name, #review_rating
+}
+
+/*search or myrestaurant results*/
+.search_result{
+  background-color:rgba(255, 255,255, 1);
+  border: solid white;
+  border-width: 0.01vh 0.01vw;
+  padding: 2vh 2vw:;
+  border-bottom: none;
+  max-height: 100vh;
+  overflow: auto;
+
+}
+
+.search_one_result{
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border-bottom: 0.01vh solid black;
+  max-height: 90vh;
+
+
+}
+
+.search_one_result:first-of-type{
+  padding-top: 0;
+}
+
+.search_one_result:last-of-type{
+  border-bottom: none;
+}
+
+#search_result_picture{
+  float: right;
+  padding: 2vh 2vw;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+#search_result_name_content{
+  text-align: center;
+  padding-bottom: 2vh;
+}
+
+#search_result_name ~ div{
+  padding-bottom: 2vh;;
+}
+
+#search_result_type_of_food, #search_result_city_title, #search_result_score_title{
+  min-width: 45vw;
+}
+#search_results_details a{
+  font-weight: 600;
+}
+
+#search_result_picture{
+
+}
+
+/*add restaurant*/
+
+#add_restaurant_form{
+  border: solid white;
+  border-width: 0.01vh 0.01vw;
+  background-color:rgba(255, 255,255, 1);
+}
+
+#add_restaurant > p{
+  padding-left: 1vw;
+}
+
+#add_restaurant_form{
+  padding: 2vh 2vw;
+}
+
+#add_restaurant_form *{
+  margin-bottom: 1vh;
+}
+
+#restaurant_address *{
+  margin-left: 5vw;
+}
+
+#restaurant_comment{
+  max-width: 80vw;
+}
+
+#add_restaurant h3{
+  padding: 2vh 2vw;
+  text-align: center;
+}
+
+/*logout/logou*/
+
+.logout_message, .login_message{
+  max-width: 90vw;
+  border: solid white;
+  border-width: 0.01vh 0.01vw;
+  padding: 2vh 2vw;
+  margin-left: 1vw;
+  background-color:rgba(255, 255,255, 1);
+  text-align: center;
+}
+
+.logout_blank_box{
+  height: 0;
+}
+
+#login_form{
+  margin: 1vh 0;
+}
+
+#login_form > input{
+  margin-top: 2vh;
+}
+
+#link_to_login a{
+  text-decoration: none;
+  color: black;
+}
+
+#login_message h3 {
+  text-align: center;
 }

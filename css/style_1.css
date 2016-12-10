@@ -51,9 +51,9 @@ body {
   margin-left: 10px;
 }
 
-#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover{
+/*#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover{
   color: grey;
-}
+}*/
 
 #menu_reviewer ul, #menu_owner ul {
   list-style-type: none;
@@ -110,6 +110,8 @@ body {
 
 /*tabs*/
 
+
+
 .tabs{
   display: inline-block;
   width: 100%;
@@ -125,6 +127,10 @@ body {
   background-color:rgba(255, 255,255, 1);
   /*background-color:rgba(001, 001,001, 0.05);*/
   /*background-color:rgba(255, 255,250, 1);*/
+}
+
+.tabs_content h3{
+  display: none;
 }
 
 .tab_links:after{
@@ -299,6 +305,10 @@ body {
   -moz-border-top-right-radius: 10px;
   border-top-right-radius: 10px;
   background-color:rgba(255, 255,255, 1);
+}
+
+#add_restaurant h3{
+  display: none;
 }
 
 #add_restaurant > p{
