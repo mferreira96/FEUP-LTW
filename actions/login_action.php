@@ -1,25 +1,10 @@
 <?php
-
-  include_once('../database/connection.php');
-  include_once('../database/user.php');
-
-  if(isset($_POST['submit'])){
-    $passwordFlag = verifyPassword($_POST['username'],$_POST['password']);
-
-    // palavra passe correta
-    if(passwordFlag == true){
-
-        $_SESSION['username'] = $_POST['username'];
-
-    }
-    else{
-      // palavra passe incorreta
-    }
-  }
-  
-  /*$_SESSION['username'] = $_POST['username'];            // store the username
- 
-   header('Location: ' . $_SERVER['HTTP_REFERER']);*/
-
-
- ?>
+session_start();
+include_once('../../database/connection.php');
+include_once('../../database/user.php');
+if (userExists($dbh, $_POST['username'], $_POST['password'])){
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['user-logged'] = true;
+}
+header('Location: ' . $_SERVER['HTTP_REFERER']);
+?>
