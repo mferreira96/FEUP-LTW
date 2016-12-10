@@ -1,7 +1,7 @@
 <?php
 
-include_once('../../database/connection.php');
-include_once('../../database/user.php');
+include_once('../database/connection.php');
+include_once('../database/user.php');
 
 
 if ($_POST['submit'] == 'owner') {

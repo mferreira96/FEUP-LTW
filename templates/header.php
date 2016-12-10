@@ -9,6 +9,7 @@
 						crossorigin="anonymous"></script>
 		<script type="text/javascript" src="../templates/jquery/tabs.js"></script>
 		<script type="text/javascript" src="../templates/jquery/maps.js"></script>
+		<script type="text/javascript" src="../templates/jquery/register.js"></script>
 		<link rel="stylesheet" href="../css/reset.css">
 		<link rel="stylesheet" href="../css/style_1.css" media="(min-width: 900px)"> <!--media="only screen and (min-width: 900px)"-->
 		<link rel="stylesheet" href="../css/style_small_screen.css" media="(max-width: 900px)">
