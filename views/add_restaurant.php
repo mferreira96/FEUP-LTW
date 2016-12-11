@@ -1,4 +1,6 @@
 <?php
+  $form_key = "12345"; //todo for controll
+  
   include_once('../templates/header.php');
   echo '<div class="content">';
     include_once('../templates/owner/owner_menu.php');
