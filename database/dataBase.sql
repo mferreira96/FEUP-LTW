@@ -28,7 +28,8 @@ CREATE TABLE restaurant (
   opening_hours TEXT,
   link_to_website TEXT,
   type_of_food TEXT,
-  comment TEXT
+  comment TEXT,
+  telephoneNumber TEXT
 );
 
 INSERT INTO restaurant(name,rate,street,number,city,type_of_food,comment) VALUES('Taskinha',0, 'rua miranda',3, 'Porto','portugues', 'Muito boa comida portuguesa');
@@ -45,12 +46,10 @@ CREATE TABLE review (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   idRestaurant INTEGER REFERENCES restaurant,
   username INTEGER REFERENCES user,
-  rate INTEGER,
+  rating INTEGER,
   comment TEXT
 );
 
-INSERT INTO review VALUES(NULL,1,'miniChef', 4, 'Good space and wonderfull food');
-INSERT INTO review VALUES(NULL,1,'masterChef', 5, 'The best food i had ever tasted');
 
 CREATE TABLE image_user(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -81,9 +80,13 @@ CREATE TRIGGER update_rate AFTER INSERT ON review
 BEGIN
 	UPDATE restaurant SET rate = (
 		SELECT AVG(rating) FROM restaurant
-		JOIN reviews ON (restaurant.id = NEW.idRestaurant)
+		JOIN review ON (restaurant.id = NEW.idRestaurant)
 		GROUP BY (idRestaurant)
 		HAVING (idRestaurant = NEW.idRestaurant)
 	)
 	WHERE (restaurant.id = NEW.idRestaurant);
 END;
+
+
+INSERT INTO review VALUES(NULL,1,'miniChef', 4, 'Good space and wonderfull food');
+INSERT INTO review VALUES(NULL,1,'masterChef', 5, 'The best food i had ever tasted');

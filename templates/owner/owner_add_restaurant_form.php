@@ -21,6 +21,10 @@
       <br>
       <!--<label for ="restaurant_address">Address</label>
       <br>-->
+      <br>
+      <label for ="telephoneNumber">Telephone number:</label>
+      <input type="text" name="telephoneNumber" id="phone" pattern="\d{9}|\d{3}-\d{3}-\d{3}"></input>
+      <br>
       <fieldset>
         <legend>Address</legend>
           <div id="restaurant_address">
@@ -34,7 +38,7 @@
           <input type="text" name="city" id="restaurant_address_city">
           <br>
           <label for ="restaurant_address_postcode">Postcode:</label>
-          <input type="text" name="postcode" id="restaurant_address_postcode">   <!-- just number accepted, has to be implemented-->
+          <input type="text" name="postcode" id="restaurant_address_postcode" pattern="(\d{4})(?:-(\d{3}))?">
           <br>
         </div>
       </fieldset>
