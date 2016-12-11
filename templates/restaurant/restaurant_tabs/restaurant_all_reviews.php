@@ -24,7 +24,7 @@
           <br>
 
           <div id="review_rating">
-            Rate: <?=$review['rate']?>
+            Rate: <?=$review['rating']?>
           </div>
 
           <br>
