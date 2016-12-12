@@ -14,7 +14,7 @@
       <br>
 
       <label>Password:
-          <input type="text" name="email" value="<?=$user['email']?>">
+          <input type="text" name="email" value="<?=$user['password']?>">
       </label>
       <br>
 
