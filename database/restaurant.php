@@ -56,7 +56,7 @@
     /*
     Get restaurants with a rate higher than X
     */
-    function getRestaurantsByRatingLimit( $limit) {
+    function getRestaurantsByRatingLimit($limit) {
       global $dbh;
 
       $stmt = $dbh->prepare('SELECT * FROM restaurant
