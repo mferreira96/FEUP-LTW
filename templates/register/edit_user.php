@@ -27,7 +27,7 @@
 
 <!--<<<<<<< HEAD-->
 <?php
-  if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
+  if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === true){
     echo'<label>Old password :
         <input type="text" name="old_password" value="">
     </label>
