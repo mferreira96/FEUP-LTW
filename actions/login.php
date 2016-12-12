@@ -4,12 +4,18 @@ if(isset($_POST['username']) && isset($_POST['password'])) //websecurity, key!
 {
   include_once('../database/connection.php');
   include_once('../database/user.php');
-  if (true || userExists($_POST['username'], $_POST['password'])){   //delete true|| and write the function
+
+  $value = getUserByusername($_POST['username']);
+  $realPass = getPassword($_POST['username']);
+
+  if ($value != false && password_verify($_POST['password'], $realPass)){
       $_SESSION['username'] = $_POST['username'];
       $_SESSION['user-logged'] = true;
       $_SESSION['userType'] = "reviewer";
       $_SESSION['IPaddress'] = $_SERVER['REMOTE_ADDR']; //for preventing hijacking
       $_SESSION['userAgent'] = $_SERVER['HTTP_USER_AGENT']; //for preventing hijacking
+
+
       header('Location: ../public/restaurant_overview.php');
   }else{
     header('Location: ../public/login.php');

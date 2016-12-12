@@ -13,6 +13,14 @@
       return $stm->fetch();
   }
 
+  function getPassword($username){
+      global $dbh;
+
+      $stm = $dbh->prepare('SELECT password FROM user WHERE username = ?');
+      $stm->execute(array($username));
+      return $stm->fetch();
+  }
+
 /*
   Verify if the password of the user is correct
 *//*
@@ -70,9 +78,11 @@
 
     }
 
-	 function createUser($db, $username, $name, $email, $password, $status) {
-		$query = "INSERT INTO user VALUES(?,?,?,?,?,?,?,?)";
+	 function createUser( $username, $name, $email, $password) {
+    global $dbh;
+
+    $query = "INSERT INTO user VALUES(?,?,?,?)";
 		$stmt = $dbh->prepare($query);
-		$stmt->execute(array($username, $name, $email, hash('sha256', $password), $status));
+		$stmt->execute(array($username, $name, $email,$password));
 }
  ?>
