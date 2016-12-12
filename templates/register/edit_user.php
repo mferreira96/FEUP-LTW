@@ -13,8 +13,18 @@
       </label>
       <br>
 
-      <label>Password:
-          <input type="text" name="email" value="<?=$user['email']?>">
+      <label>Old password :
+          <input type="text" name="old_password" value="<?=$user['email']?>">
+      </label>
+      <br>
+
+      <label>New password:
+          <input type="text" name="new_password" value="<?=$user['email']?>">
+      </label>
+      <br>
+
+      <label>Please confirm new password:
+          <input type="text" name="confirm_new_password" value="<?=$user['email']?>">
       </label>
       <br>
 

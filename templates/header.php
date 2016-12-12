@@ -16,5 +16,5 @@
 	</head>
 	<body>
 		<header>
-			<h1><a href="index.php">Pintereste</a></h1>
+			<h1><a href="restaurant_overview.php">Pintereste</a></h1>
 		</header>

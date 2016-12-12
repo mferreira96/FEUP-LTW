@@ -27,11 +27,11 @@ body {
   min-height: 70vh; /*has to be changed as soon as footer is changed*/
 }
 
-#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover{
+#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover, #login_message a:hover{
   color: grey;
 }
 
-#menu_reviewer a , #menu_owner a, #search_results_details a, .link_to_login a{
+#menu_reviewer a , #menu_owner a, #search_results_details a, .link_to_login a, #login_message a{
   text-decoration: none;
   color: black;
 }
@@ -131,6 +131,10 @@ body {
 
 /*tabs content style each*/
 #restaurant_info li{
+}
+
+#restaurant_info li div{
+ padding: 1vh 5vw;
 }
 
 #maps{
@@ -272,6 +276,21 @@ body {
   padding: 2vh 2vw;
   text-align: center;
 }
+/*edit profile*/
+
+#edit_user{
+/*  border: 1px solid white;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-top-right-adius: 10px;
+  border-top-right-radius: : 10px;*/
+  background-color:rgba(255, 255,255, 1);
+  padding: 1vh 1vw;
+}
+
+#edit_user input{
+  margin: 1vh 0;
+}
+
 
 /*logout/logou*/
 
@@ -280,6 +299,7 @@ body {
   border: solid white;
   border-width: 0.01vh 0.01vw;
   padding: 2vh 2vw;
+  padding-bottom: 3vh;
   margin-left: 1vw;
   background-color:rgba(255, 255,255, 1);
   text-align: center;
@@ -291,6 +311,10 @@ body {
 
 #login_form{
   margin: 1vh 0;
+}
+
+#login_message a{
+  font-size: small;
 }
 
 #login_form > input{

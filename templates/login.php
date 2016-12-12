@@ -12,4 +12,5 @@
 		</div>
 		<input type="submit" value="Login">
 	</form>
+	<a id="create_account" href="register.php">Create account</a>
 </div>

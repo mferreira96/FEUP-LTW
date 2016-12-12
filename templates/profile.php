@@ -1,7 +1,11 @@
+<?php
+  include('../database/connection.php');
+ ?>
+
 <section class="central">
     <div class="container">
         <article id="myprofile" class="box">
-            <div id="userlogo"><img src="../uploads/users/defaultlogo.png"></div>
+            <div id="userlogo"><img src="../pics/blank-profile-picture.png.png"></div>
             <div id="userpresentation">
                 <h2><?=$user['name']?></h2>
                 <p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;<?=$user['country']?></p>

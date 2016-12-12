@@ -1,7 +1,14 @@
 <?php
 function login_check(){
   if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
-    header('Location: ../views/login.php');
+    header('Location: ../public/login.php');
+    die();
+  }
+}
+
+function login_check_register(){
+  if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === true){
+    header('Location: ../public/restaurant_overview.php');
     die();
   }
 }
