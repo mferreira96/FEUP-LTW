@@ -15,7 +15,7 @@
 
 /*
   Verify if the password of the user is correct
-*/
+*//*
   function verifyPassword($username, $password){
     global $dbh;
 
@@ -29,7 +29,7 @@
       return true;
 
     return false;
-  }
+  }*/
 
 /*
   Add an user
