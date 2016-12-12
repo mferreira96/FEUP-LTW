@@ -34,7 +34,7 @@
 /*
   Add an user
 */
-
+/*
   function addUser($user){
     global $dbh;
 
@@ -42,7 +42,7 @@
     $passW = sha1($user['password']);
     $stm->execute(array($user['username'],$user['name'], $user['email'],  $passW));
   }
-
+*/
   /*
   Get user by Id
   */
@@ -58,17 +58,17 @@
   }
 
 
-      /*
-      Update user
-      */
+    /*
+    Update user
+    */
 
-      function updateUser($variables){
-        global $dbh;
+    function updateUser($variables){
+      global $dbh;
 
-        $stm = $dbh->prepare('UPDATE user SET ?, ?,? WHERE username = ?');
-        $stm->execute(array($variables['name'], $variables['email'], $variables['password'], $variables['username']));
+      $stm = $dbh->prepare('UPDATE user SET ?, ?,? WHERE username = ?');
+      $stm->execute(array($variables['name'], $variables['email'], $variables['password'], $variables['username']));
 
-      }
+    }
 
 	 function createUser($db, $username, $name, $email, $password, $status) {
 		$query = "INSERT INTO user VALUES(?,?,?,?,?,?,?,?)";

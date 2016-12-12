@@ -32,8 +32,10 @@ CREATE TABLE restaurant (
   telephoneNumber TEXT
 );
 
-INSERT INTO restaurant(name,rate,street,number,city,type_of_food,comment) VALUES('Taskinha',0, 'rua miranda',3, 'Porto','portugues', 'Muito boa comida portuguesa');
-INSERT INTO restaurant(name,rate,street,number,city,type_of_food,comment) VALUES('Bitoque',0, 'rua vasco da gama',2, 'Lisboa','portugues', 'A melhor comida de Lisboa');
+INSERT INTO restaurant(name,rate,street,number,city,type_of_food,comment, link_to_website,telephoneNumber, opening_hours)
+    VALUES('Taskinha',0, 'rua miranda',3, 'Porto','portugues', 'Muito boa comida portuguesa', 'www.google.com', 963258741, '14h');
+INSERT INTO restaurant(name,rate,street,number,city,type_of_food,comment, link_to_website,telephoneNumber, opening_hours)
+    VALUES('Bitoque',0, 'rua vasco da gama',2, 'Lisboa','portugues', 'A melhor comida de Lisboa', 'www.google.com', 968745123, '15h');
 
 CREATE TABLE restaurantOwners(
   idRestaurant INTEGER REFERENCES restaurant,
@@ -57,8 +59,8 @@ CREATE TABLE image_user(
   name TEXT
 );
 
-INSERT INTO image_user VALUES(NULL,1,'gallery_example.png');
-INSERT INTO image_user VALUES(NULL,2,'random_2.png');
+INSERT INTO image_user VALUES(NULL,'masterChef','gallery_example.png');
+INSERT INTO image_user VALUES(NULL,'miniChef','random_2.png');
 
 CREATE TABLE image_restaurant(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
