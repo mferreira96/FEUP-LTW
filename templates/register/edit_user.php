@@ -4,6 +4,19 @@
       echo'<h3>Create profile</h3>';
     }
    ?>
+
+  <form action="../actions/update_user_photo.php" method="post"  enctype="multipart/form-data">
+      <input type="hidden" name="id" value="<?=$user['username']?>">
+
+      <label>Photo:
+          <input type="file" name="name" value="<?=$image['name']?>">
+      </label>
+
+      <br>
+      <input type="submit" name="submit" value="Change" id="buttonSave">
+  </form>
+
+
   <form action="../actions/update_user.php" method="post"  enctype="multipart/form-data">
     <?php
       if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
@@ -25,7 +38,7 @@
       </label>
       <br>
 
-<!--<<<<<<< HEAD-->
+
 <?php
   if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === true){
     echo'<label>Old password :
@@ -44,13 +57,14 @@
       <label>Please confirm new password:
           <input type="text" name="confirm_new_password" value="">
       <br>
-<!--=======-->
+
   <!--    <label>Password:
           <input type="text" name="email" value="">-->
-<!-- origin/master-->
+
       </label>
       <br>
 
       <input type="submit" name="submit" value="Save" id="buttonSave">
   </form>
+
 </div>

@@ -41,4 +41,11 @@ function getImageOfRestaurant($idRestaurant){
     $stm->execute(array($username, $name));
   }
 
+  function updateUserPhoto($username,$name){
+    global $dbh;
+
+    $stm = $dbh->prepare('UPDATE image_user SET name = ? WHERE username = ?');
+    $stm->execute(array($name, $username));
+  }
+
  ?>
