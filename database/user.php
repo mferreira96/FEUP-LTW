@@ -69,7 +69,7 @@
         $stm->execute(array($variables['name'], $variables['email'], $variables['password'], $variables['username']));
 
       }
-	  
+
 	 function createUser($db, $username, $name, $email, $password, $status) {
 		$query = "INSERT INTO user VALUES(?,?,?,?,?,?,?,?)";
 		$stmt = $dbh->prepare($query);
