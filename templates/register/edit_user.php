@@ -3,6 +3,8 @@
     if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
       echo'<h3>Create profile</h3>';
     }
+
+
    ?>
 
   <form action="../actions/update_user_photo.php" method="post"  enctype="multipart/form-data">
@@ -20,7 +22,7 @@
   <form action="../actions/update_user.php" method="post"  enctype="multipart/form-data">
     <?php
       if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
-        echo'<label>Name:
+        echo'<label>username:
             <input type="text" name="username" value="">
         </label>
         <br>';
@@ -45,6 +47,13 @@
         <input type="text" name="old_password" value="">
     </label>
     <br>';
+    include_once('../../database/connection.php');
+    include_once('../../database/user.php');
+
+    $username = $_SESSION['username'];
+    $realPass = getPassword($_POST['username']);
+
+    password_verify($_POST['old_password'], $realPass)
   }
 ?>
 

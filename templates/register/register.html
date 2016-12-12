@@ -5,7 +5,7 @@
     <title>Pintereste - Login</title>
     <meta charset="UTF-8">
     <!--<link rel="stylesheet" href="style.css">-->
-    
+
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="login">
             <h1>Register</h1>
             <form action="register.php" method="POST">
-				<input type="text" name="name" placeholder="Name"/>
+				        <input type="text" name="name" placeholder="Name"/>
                 <input type="text" name="username" placeholder="Username"/>
                 <input type="password" name="password" placeholder="Password"/>
                 <input type="password" name="confirm" placeholder="Confirm your password"/>
@@ -30,7 +30,7 @@
 <script>
 $('form').submit(function () {
     var username = $.trim($('input[name="username"]').val());
-	var name = $.trim($('input[name="name"]').val());   
+	var name = $.trim($('input[name="name"]').val());
     var confirm = $.trim($('input[name="confirm"]').val());
 	var password = $.trim($('input[name="password"]').val());
     if (user === '') {
