@@ -13,7 +13,7 @@
       </label>
       <br>
 
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
       <label>Old password :
           <input type="text" name="old_password" value="<?=$user['email']?>">
       </label>
@@ -26,10 +26,11 @@
 
       <label>Please confirm new password:
           <input type="text" name="confirm_new_password" value="<?=$user['email']?>">
-=======
+      <br>
+<!--=======-->
       <label>Password:
           <input type="text" name="email" value="<?=$user['password']?>">
->>>>>>> origin/master
+<!-- origin/master-->
       </label>
       <br>
 
