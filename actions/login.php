@@ -4,7 +4,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) //websecurity, key!
 {
   include_once('../database/connection.php');
   include_once('../database/user.php');
-  if (true || userExists($dbh, $_POST['username'], $_POST['password'])){   //delete true|| and write the function
+  if (true || userExists($_POST['username'], $_POST['password'])){   //delete true|| and write the function
       $_SESSION['username'] = $_POST['username'];
       $_SESSION['user-logged'] = true;
       $_SESSION['userType'] = "reviewer";

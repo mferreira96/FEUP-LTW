@@ -19,7 +19,7 @@
     function addRestaurant($values){
       global $dbh;
 
-      $stm = $dbh->prepare('INSERT INTO restaurant(name,street,number,city,postcode,opening_hours,link_to_website, idPhoto, rate, type_of_food, telephoneNumber) VALUES ( ?,?,?,?,?,?,?,0, ?, ?, ?)');
+      $stm = $dbh->prepare('INSERT INTO restaurant(name,street,number,city,postcode,opening_hours,link_to_website, rate, type_of_food, telephoneNumber) VALUES ( ?,?,?,?,?,?,?,0, ?, ?)');
       $stm->execute(array($values['name'],$values['street'], $values['number'], $values['city'], $values['postcode'],  $values['opening_hours'], $values['link_to_website'],$values['type_of_food'],$values['comment'],$values['telephoneNumber'] ));
 
     }
@@ -56,20 +56,20 @@
     /*
     Get restaurants with a rate higher than X
     */
-/*
-    function getRestaurantsByRate($number){
+    function getRestaurantsByRatingLimit( $limit) {
       global $dbh;
 
-      $stm = $dbh->prepare('SELECT * FROM restaurant ORDER BY rate DESC LIMIT ?')
-      $stm->execute(array($number));
-      return $stm->fetchAll();
-    }
+      $stmt = $dbh->prepare('SELECT * FROM restaurant
+  							   ORDER BY rate DESC LIMIT ?');
+  		$stmt->execute(array($limit));
 
+      return $stmt->fetchAll();
+  	}
 
     /*
     Get restaurant by name
     */
-/*
+
     function getRestaurantsByName($name){
       global $dbh;
 
@@ -77,7 +77,7 @@
       $stm->execute(array($name));
       return $stm->fetch();
     }
-*/
+
 
     /*
       Get the owners of the restaurant
