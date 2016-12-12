@@ -6,6 +6,7 @@
   login_check();
   $userType = userType_check();
   getAllRestaurants();
+
   include('../views/result_restaurants.php');
 
 ?>

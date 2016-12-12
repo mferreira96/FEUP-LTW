@@ -8,6 +8,8 @@ if(isset($_POST['username']) && isset($_POST['password'])) //websecurity, key!
       $_SESSION['username'] = $_POST['username'];
       $_SESSION['user-logged'] = true;
       $_SESSION['userType'] = "reviewer";
+      $_SESSION['IPaddress'] = $_SERVER['REMOTE_ADDR']; //for preventing hijacking
+      $_SESSION['userAgent'] = $_SERVER['HTTP_USER_AGENT']; //for preventing hijacking
       header('Location: ../public/restaurant_overview.php');
   }else{
     header('Location: ../public/login.php');
