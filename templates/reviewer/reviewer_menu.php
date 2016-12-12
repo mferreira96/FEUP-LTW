@@ -10,9 +10,9 @@
     <!--    </ul>-->
     <!--</div>-->
     <li><a href="profile.php">Profile</a></li>
-    <li><a href="">Become owner</a></li>
+    <li><a href="../actions/change_userType.php">Become owner</a></li>
     <!--<div class="menu_logout">-->
-    <li><a href="logout_reviewer.php">Logout</a></li>
+    <li><a href="logout.php">Logout</a></li>
   <!--  </div>-->
   </ul>
 </nav>

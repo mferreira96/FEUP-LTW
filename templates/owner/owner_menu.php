@@ -1,7 +1,7 @@
   <nav id="menu_owner">
     <ul>
       <!--<div id ="my_restaurants">-->
-      <li><a href="result_restaurants.php">My Restaurants</a></li>    <!-- inserting an restaurant a "sub-li" should be created -->
+      <li><a href="restaurant_overview.php?userType=owner">My Restaurants</a></li>    <!-- inserting an restaurant a "sub-li" should be created -->
           <!--<ul>
             <div id="all_restaurants">
 
@@ -13,9 +13,9 @@
           <div>-->
     <!--  </div>-->
       <li><a href="profile.php">Profile</a></li>
-      <li><a href="">Become reviewer</a></li>
+      <li><a href="../actions/change_userType.php">Become reviewer</a></li>
       <!--<div class="menu_logout">-->
-      <li><a href="logout_owner.php">Logout</a></li>
+      <li><a href="logout.php">Logout</a></li>
     <!--  </div>-->
     </ul>
   </nav>
