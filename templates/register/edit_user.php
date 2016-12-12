@@ -1,6 +1,18 @@
 <div id="edit_user">
+  <?php
+    if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
+      echo'<h3>Create profile</h3>';
+    }
+   ?>
   <form action="../actions/update_user.php" method="post"  enctype="multipart/form-data">
-
+    <?php
+      if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
+        echo'<label>Name:
+            <input type="text" name="username" value="">
+        </label>
+        <br>';
+      }
+     ?>
       <input type="hidden" name="id" value="<?=$user['username']?>">
 
       <label>Name:
@@ -14,22 +26,27 @@
       <br>
 
 <!--<<<<<<< HEAD-->
-      <label>Old password :
-          <input type="text" name="old_password" value="<?=$user['email']?>">
-      </label>
-      <br>
+<?php
+  if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
+    echo'<label>Old password :
+        <input type="text" name="old_password" value="">
+    </label>
+    <br>';
+  }
+?>
+
 
       <label>New password:
-          <input type="text" name="new_password" value="<?=$user['email']?>">
+          <input type="text" name="new_password" value="">
       </label>
       <br>
 
       <label>Please confirm new password:
-          <input type="text" name="confirm_new_password" value="<?=$user['email']?>">
+          <input type="text" name="confirm_new_password" value="">
       <br>
 <!--=======-->
-      <label>Password:
-          <input type="text" name="email" value="<?=$user['password']?>">
+  <!--    <label>Password:
+          <input type="text" name="email" value="">-->
 <!-- origin/master-->
       </label>
       <br>

@@ -354,6 +354,23 @@ body {
   margin: 10px 0;
 }
 
+/*register, edit user*/
+
+#edit_user{
+  border: 1px solid white;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-top-right-adius: 10px;
+  border-top-right-radius: : 10px;
+  background-color:rgba(255, 255,255, 1);
+  padding: 20px;
+}
+
+#register_profile{
+  margin-left: 150px;
+  margin-right: 150px;
+
+}
+
 /*logout/logou*/
 
 .logout_message, .login_message{
