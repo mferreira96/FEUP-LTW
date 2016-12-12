@@ -73,7 +73,7 @@
     function getRestaurantsByName($name){
       global $dbh;
 
-      $stm = $dbh->prepare('SELECT * FROM restaurant WHERE name = ?')
+      $stm = $dbh->prepare('SELECT * FROM restaurant WHERE name = ?');
       $stm->execute(array($name));
       return $stm->fetch();
     }
@@ -83,7 +83,7 @@
       Get the owners of the restaurant
     */
 
-    function getOwnersId($idRestaurant){
+    function getOwnersUsername($idRestaurant){
       global $dbh;
 
       $stm = $dbh->prepare('SELECT username FROM restaurantOwners WHERE idRestaurant = ?');
