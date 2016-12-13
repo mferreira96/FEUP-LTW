@@ -2,7 +2,7 @@ html {
 }
 
 header{
-  /*background-image: url('../pics/title_5.jpg');*/
+  background-image: url('../pics/logo_big.png');
   height: 30vh;
   background-size: contain;
   width: 900px;
@@ -10,12 +10,14 @@ header{
   margin-left: auto;
   margin-right: auto;
   background-color: #79091C;
+  background-repeat: no-repeat;
 }
 
 header a{
   text-decoration: none;
   color: white;
   padding: 50px;
+
 }
 
 body {

@@ -1,11 +1,13 @@
 header{
+  background-image: url('../pics/logo_small.png');
   height: 20vh;
   background-size: contain;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   background-color: #79091C;
-}
+  background-repeat: no-repeat;
+  background-position: center;
 
 header a{
   text-decoration: none;
