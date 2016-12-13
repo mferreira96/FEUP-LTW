@@ -12,7 +12,7 @@
   {
     if($_SESSION['userType'] === "reviewer")
     {
-      if($_SESSION['request'] === "search")
+      if($_SESSION['request'] === "search_name")
       {
         //search by name funciont
       }
