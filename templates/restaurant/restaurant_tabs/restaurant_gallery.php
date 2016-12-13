@@ -20,10 +20,10 @@
 
   <!-- Syntax Highlighter -->
  
-	<link rel="stylesheet" href="gallery/flexslider.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../FlexSlider/flexslider.css" type="text/css" media="screen" />
 
 	<!-- Modernizr -->
-  <script src="gallery/js/modernizr.js"></script>
+  <script src="../FlexSlider/Gallery/js/modernizr.js"></script>
 
 </head>
 <body class="loading">
@@ -40,8 +40,9 @@
 				?>
 			
             <li>
-  	    	    <img src=<?="../pics/". $image['name'] ?> width="500"px />
+  	    	    <img src=<?="../pics/". $image['name'] ?> width="500"px height="500"px/>
   	    	</li>
+			
 			<?php } ?>
           </ul>
         </div>
@@ -56,7 +57,7 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
 
   <!-- FlexSlider -->
-  <script defer src="gallery/jquery.flexslider.js"></script>
+  <script defer src="../FlexSlider/jquery.flexslider.js"></script>
 
   <script type="text/javascript">
     $(function(){
@@ -74,15 +75,25 @@
 
 
   <!-- Syntax Highlighter -->
-  <script type="text/javascript" src="gallery/js/shCore.js"></script>
-  <script type="text/javascript" src="gallery/js/shBrushXml.js"></script>
-  <script type="text/javascript" src="gallery/js/shBrushJScript.js"></script>
+  <script type="text/javascript" src="../FlexSlider/gallery/js/shCore.js"></script>
+  <script type="text/javascript" src="../FlexSlider/gallery/js/shBrushXml.js"></script>
+  <script type="text/javascript" src="../FlexSlider/gallery/js/shBrushJScript.js"></script>
 
   <!-- Optional FlexSlider Additions -->
-  <script src="gallery/js/jquery.easing.js"></script>
-  <script src="gallery/js/jquery.mousewheel.js"></script>
-  <script defer src="gallery/js/demo.js"></script>
+  <script src="../FlexSlider/gallery/js/jquery.easing.js"></script>
+  <script src="../FlexSlider/gallery/js/jquery.mousewheel.js"></script>
+  <script defer src="../FlexSlider/gallery/js/demo.js"></script>
 
 </body>
 
+<div id="n">
+<?php if($_SESSION['userType'] === "owner")
+{
+?>
+
+  <div id="upload_picture"><a href="../public/upload_restaurant_picture.php?id=<?php echo $_GET['id'];?>">Upload a new picture</a></div>
+<?php
+}
+?>
+	
 </div>
