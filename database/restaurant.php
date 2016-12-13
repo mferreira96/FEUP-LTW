@@ -123,4 +123,12 @@
       $stm->execute(array($city, $food));
       return $stmt->fetchAll();
     }
+
+    function getRestaurantsByOwner($username){
+      global $dbh;
+
+      $stm = $dbh->prepare('SELECT * FROM restaurant, restaurantOwners WHERE restaurantOwners.username = ? AND restaurantOwners.idRestaurant = restaurant.id');
+      $stm->execute(array($username));
+      return $stmt->fetchAll();
+    }
  ?>

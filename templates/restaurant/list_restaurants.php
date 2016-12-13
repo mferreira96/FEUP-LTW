@@ -7,33 +7,36 @@
 
 
      if($_SESSION['userType'] === "owner"){
-       //$restaurants = all restaurants of an owner
+       try{
+         $restaurants = getRestaurantsByOwner($_SESSION['username']);
+       }catch (PDOException $e){
+         die($e->getMessage());
+       }
      }
-     else
-     {if($_SESSION['request'] === "search_name")
-       {
-        try
-        {
+     else{
+       if($_SESSION['request'] === "search_name"){
+        try{
           $restaurants = getRestaurantsByName($_SESSION['search_by_name']);
-        }
-        catch (PDOException $e)
-        {
+        }catch (PDOException $e){
           die($e->getMessage());
         }
-        }
-        else
-        {
-          if($_SESSION['request'] === "search_advanced")
-          {
-            $restaurants = getRestaurantByCityFood($_SESSION['search_by_city'], $_SESSION['search_by_food']);
+        }else{
+          if($_SESSION['request'] === "search_advanced"){
+            try{
+              $restaurants = getRestaurantByCityFood($_SESSION['search_by_city'], $_SESSION['search_by_food']);
+            }catch (PDOException $e){
+              die($e->getMessage());
+            }
           }
-          else
-          {
-            $restaurants = getAllRestaurants();
+          else {
+            try{
+              $restaurants = getAllRestaurants();
+            }catch (PDOException $e){
+              die($e->getMessage());
+            }
           }
         }
        }
-
 
   //   $restaurants = getAllRestaurants();
 

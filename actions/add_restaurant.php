@@ -12,10 +12,13 @@
       try {
 
         addRestaurant($variables);
+        $idRestaurant= $dbh->lastInsertId();
+        addOwner($idRestaurant, $_SESSION['username']);
+        
         $tmp_name = $_FILES["restaurant_picture"]["tmp_name"];
         $name = basename($_FILES["restaurant_picture"]["name"]);
 
-        $id= $dbh->lastInsertId();
+
 
 
         addImageRestaurant($name, $id);
