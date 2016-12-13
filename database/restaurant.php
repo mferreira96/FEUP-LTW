@@ -119,7 +119,7 @@
     function getRestaurantByCityFood($city, $food){
       global $dbh;
 
-      $stm = $dbh->prepare('SELECT * FROM restaurant WHERE city = ? AND type_of_food= ?');
+      $stm = $dbh->prepare('SELECT * FROM restaurant WHERE city = ? AND type_of_food = ?');
       $stm->execute(array($city, $food));
       return $stm->fetchAll();
     }
