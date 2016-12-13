@@ -53,12 +53,12 @@
       <br>
       <label for ="restaurant_comment">Comment:</label>
       <br>
-      <textarea id="restaurant_comment" rows="4" cols="60"></textarea>
+      <textarea id="restaurant_comment" name="comment" rows="4" cols="60"></textarea>
       <br>
       <label for ="restaurant_picture">Picture of restaurant:</label>
       <input type="file" name="restaurant_picture" id="restaurant_picture"></input>
       <br>
-    <input type="submit" name = "add" value="Add restaurant">
+    <input type="submit" name="add" value="Add restaurant">
     </form>
   </div>
 </div>
