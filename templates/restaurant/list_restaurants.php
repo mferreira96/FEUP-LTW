@@ -44,9 +44,9 @@
 
   //   $restaurants = getAllRestaurants();
 
-    print_r($restaurants);
+  //  print_r($restaurants);
      foreach($restaurants as $restaurant) {
-          $res = getImageOfRestaurant($restaurant['id']);
+          $res = getImagesOfRestaurant($restaurant['id']);
 
        ?>
          <article class="search_one_result">
