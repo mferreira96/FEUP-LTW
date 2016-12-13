@@ -27,13 +27,19 @@ body {
   min-height: 70vh; /*has to be changed as soon as footer is changed*/
 }
 
-#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover, #login_message a:hover, .logout_message a:hover{
+#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover, #login_message a:hover, .logout_message a:hover, #external_website a:hover{
   color: grey;
 }
 
 #menu_reviewer a , #menu_owner a, #search_results_details a, .link_to_login a, #login_message a, .logout_message a{
   text-decoration: none;
   color: black;
+}
+
+#external_website a{
+  color: #79091C;
+  text-decoration: none;
+  font-weight: 100;
 }
 
 /*menu*/
