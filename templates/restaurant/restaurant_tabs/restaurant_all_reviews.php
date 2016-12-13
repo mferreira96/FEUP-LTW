@@ -33,7 +33,7 @@
               Comment: <?=$review['comment']?>
           </div>
 
-          <?php if($_SESSION['usertype'] === "owner")
+          <?php if($_SESSION['userType'] === "owner")
           {
           ?>
             <form method="POST" action="../templates/restaurant/restaurant_tabs/restaurant_review_answer.php">
@@ -47,7 +47,7 @@
         </article>
       <?php } ?>
 </section>
-<?php if($_SESSION['usertype'] === "reviewer")
+<?php if($_SESSION['useTtype'] === "reviewer")
 {
 ?>
   <form method="POST" action="../templates/restaurant/restaurant_tabs/restaurant_review.php">
