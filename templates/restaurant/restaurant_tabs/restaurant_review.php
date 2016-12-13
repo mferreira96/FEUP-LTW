@@ -1,8 +1,8 @@
 
-<form action="../actions/add_review.php" method="post"  enctype="multipart/form-data">
-  <?php
-    $_POST['idRestaurant'] = $_GET['id'];
-   ?>
+<form action="../actions/add_review.php?id=<?php echo $_GET['id']; ?>" method="post"  enctype="multipart/form-data">
+
+
+
   <div id="one_review">
     <div id="profile_picture">
       <img src="../pics/blank-profile-picture.png" alt="profile_picture" width="100" height="100">
