@@ -53,7 +53,7 @@
     $username = $_SESSION['username'];
     $realPass = getPassword($_POST['username']);
 
-    password_verify($_POST['old_password'], $realPass)
+    password_verify($_POST['old_password'], $realPass);
   }
 ?>
 
