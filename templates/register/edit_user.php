@@ -22,7 +22,7 @@
   <form action="../actions/update_user.php" method="post"  enctype="multipart/form-data">
     <?php
       if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
-        echo'<label>username:
+        echo'<label>Username:
             <input type="text" name="username" value="">
         </label>
         <br>';
@@ -59,12 +59,12 @@
 
 
       <label>New password:
-          <input type="text" name="new_password" value="">
+          <input type="Password" name="new_password" value="">
       </label>
       <br>
 
       <label>Please confirm new password:
-          <input type="text" name="confirm_new_password" value="">
+          <input type="password" name="confirm_new_password" value="">
       <br>
 
   <!--    <label>Password:
