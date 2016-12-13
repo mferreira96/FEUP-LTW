@@ -7,7 +7,6 @@
 
 
      if($_SESSION['userType'] === "owner"){
-       echo 'myrestaurants';
        try{
          $restaurants = getRestaurantsByOwner($_SESSION['username']);
        }catch (PDOException $e){
@@ -16,7 +15,6 @@
      }
      else{
        if(isset($_SESSION['request']) &&  $_SESSION['request'] === "search_name"){
-        echo 'search';
         try{
           $restaurants = getRestaurantsByName($_SESSION['search_by_name']);
         }catch (PDOException $e){
@@ -24,7 +22,6 @@
         }
         }else{
           if(isset($_SESSION['request']) && $_SESSION['request'] === "search_advanced"){
-            echo'search advanced';
             try{
               $restaurants = getRestaurantByCityFood($_SESSION['search_by_city'], $_SESSION['search_by_food']);
             }catch (PDOException $e){
@@ -32,7 +29,6 @@
             }
           }
           else {
-            echo 'first page';
             try{
               $restaurants = getAllRestaurants();
             }catch (PDOException $e){

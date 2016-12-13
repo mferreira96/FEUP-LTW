@@ -1,18 +1,4 @@
-<div id="restaurant_gallery" class="restaurant_tabs_content">
-
-<?php
-
-	
-    include_once('../database/connection.php');
-    include_once('../database/image.php');
-	
-
-
-    $images = getImagesOfRestaurant($restaurant['id']);
-
-?>
-
-
+<html class="no-js" lang="en">
 <head>
 	<meta content="charset=utf-8">
 	<title>Gallery</title>
@@ -20,10 +6,10 @@
 
   <!-- Syntax Highlighter -->
  
-	<link rel="stylesheet" href="gallery/flexslider.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../flexslider.css" type="text/css" media="screen" />
 
 	<!-- Modernizr -->
-  <script src="gallery/js/modernizr.js"></script>
+  <script src="js/modernizr.js"></script>
 
 </head>
 <body class="loading">
@@ -34,15 +20,18 @@
       <section class="slider">
         <div class="flexslider">
           <ul class="slides">
-		  <?php
-			$var = 1;
-			foreach($images as $image){
-				?>
-			
             <li>
-  	    	    <img src=<?="../pics/". $image['name'] ?> width="500"px />
-  	    	</li>
-			<?php } ?>
+  	    	    <img src="images/food_1.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="images/food_2.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="images/food_3.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="images/food_4.jpg" />
+  	    		</li>
           </ul>
         </div>
       </section>
@@ -56,7 +45,7 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
 
   <!-- FlexSlider -->
-  <script defer src="gallery/jquery.flexslider.js"></script>
+  <script defer src="../jquery.flexslider.js"></script>
 
   <script type="text/javascript">
     $(function(){
@@ -74,15 +63,14 @@
 
 
   <!-- Syntax Highlighter -->
-  <script type="text/javascript" src="gallery/js/shCore.js"></script>
-  <script type="text/javascript" src="gallery/js/shBrushXml.js"></script>
-  <script type="text/javascript" src="gallery/js/shBrushJScript.js"></script>
+  <script type="text/javascript" src="js/shCore.js"></script>
+  <script type="text/javascript" src="js/shBrushXml.js"></script>
+  <script type="text/javascript" src="js/shBrushJScript.js"></script>
 
   <!-- Optional FlexSlider Additions -->
-  <script src="gallery/js/jquery.easing.js"></script>
-  <script src="gallery/js/jquery.mousewheel.js"></script>
-  <script defer src="gallery/js/demo.js"></script>
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script defer src="js/demo.js"></script>
 
 </body>
-
-</div>
+</html>
