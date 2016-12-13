@@ -5,7 +5,7 @@
   include('../database/restaurant.php');
   login_check();
   $userType = userType_check();
-  if($_SESSION['userType'] === "owner"){
+  /*if($_SESSION['userType'] === "owner"){
     //function get all restaurants of an owner
   }
   else
@@ -24,7 +24,7 @@
       }
     }
     getAllRestaurants();
-  }
+  }*/
 
   include('../public/restaurant_overview.php');
 

@@ -115,4 +115,12 @@
         $stm = $dbh->prepare('UPDATE restaurant SET ?, ?,?,?,?,?,? WHERE id = ?');
         $stm->execute(array($values['name'],$values['street'], $values['number'], $values['city'], $values['postcode'],  $values['opening_hours'], $values['link_to_website']));
     }
+
+    function getRestaurantByCityFood($city, $food){
+      global $dbh;
+
+      $stm = $dbh->prepare('SELECT * FROM restaurant WHERE city = ? AND type_of_food= ?');
+      $stm->execute(array($city, $food));
+      return $stmt->fetchAll();
+    }
  ?>

@@ -4,9 +4,8 @@ include('../database/connection.php');
 include('../database/restaurant.php');
 
 $_SESSION['request'] = 'search_advanced';
-$_SESSION['search_by_name'] = $_POST['search_by_name'];
 $_SESSION['search_by_city'] = $_POST['search_by_city'];
-$_SESSION['search_by_rating'] = $_POST['search_by_rating'];
+$_SESSION['search_by_food'] = $_POST['search_by_food'];
 
 /**try {
   getRestaurantsByName($_POST['search_by_name_only']);
