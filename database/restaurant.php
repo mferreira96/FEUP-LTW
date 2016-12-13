@@ -111,9 +111,9 @@
 
     function updateRestaurant($values){
         global $dbh;
-
-        $stm = $dbh->prepare('UPDATE restaurant SET name=?, street=?,city=?,postcode=?,opening_hours=?,link_to_website=? WHERE id = ?');
-        $stm->execute(array($values['name'],$values['street'], $values['number'], $values['city'], $values['postcode'],  $values['opening_hours'], $values['link_to_website']));
+        print_r($values);
+        $stm = $dbh->prepare('UPDATE restaurant SET name=?, street=?, number=?, city=?, postcode=?, opening_hours=?,link_to_website=? WHERE id = ?');
+        $stm->execute(array($values['name'],$values['street'], $values['number'], $values['city'], $values['postcode'],  $values['opening_hours'], $values['link_to_website'], $values['id']));
     }
 
     function getRestaurantByCityFood($city, $food){
