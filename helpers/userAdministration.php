@@ -1,6 +1,6 @@
 <?php
 function login_check(){
-  if(login_check_bool() === false){
+  if(!login_check_bool()){
     header('Location: ../public/login.php');
     die();
   }
