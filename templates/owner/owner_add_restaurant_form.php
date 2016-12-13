@@ -58,7 +58,7 @@
       <label for ="restaurant_picture">Picture of restaurant:</label>
       <input type="file" name="restaurant_picture" id="restaurant_picture"></input>
       <br>
-    <input type="submit" value="Add restaurant">
+    <input type="submit" name = "add" value="Add restaurant">
     </form>
   </div>
 </div>

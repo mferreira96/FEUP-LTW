@@ -5,7 +5,9 @@
 
 
   try {
-    updateUser($_POST);
+    if (isset($_POST['submit'])) {
+      updateUser($_POST);
+    }
   } catch (PDOException $e) {
     die($e->getMessage());
   }
