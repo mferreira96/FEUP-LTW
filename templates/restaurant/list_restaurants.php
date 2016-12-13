@@ -25,7 +25,7 @@
         {
           if($_SESSION['request'] === "search_advanced")
           {
-            $restaurants = //search by $_SESSION['search_by_name'], $_SESSION['search_by_city'] and $_SESSION['search_by_rating']
+            $restaurants = getRestaurantByCityFood($_SESSION['search_by_city'], $_SESSION['search_by_food']);
           }
           else
           {
