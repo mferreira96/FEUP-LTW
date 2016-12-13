@@ -32,6 +32,7 @@
           <div id="comment">
             Comment: <?=$review['comment']?>
           </div>
+
         </article>
       <?php } ?>
 </section>

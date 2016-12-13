@@ -1,4 +1,7 @@
 <?php
+  echo '<form method="POST" action="../templates/restaurant/restaurant_tabs/restaurant_review.php">';
+    echo '<input type="submit" value="Make a review"/>';
+  echo '</form>';
   echo '<div class="tabs">';
     include("../templates/restaurant/restaurant_tabs/restaurant_links_to_tabs.php");
     echo'<div class="tabs_content">';
@@ -12,4 +15,5 @@
       include("../templates/restaurant/restaurant_tabs/restaurant_gallery.php");
     echo'</div>';
   echo'</div>';
+
 ?>
