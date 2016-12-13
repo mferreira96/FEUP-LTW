@@ -9,7 +9,7 @@ function getAllImageSOfRestaurants(){
   return $stm->fetchAll();
 }
 
-function getImageOfRestaurant($idRestaurant){
+function getImagesOfRestaurant($idRestaurant){
   global $dbh;
 
   $stm = $dbh->prepare('SELECT * FROM image_restaurant WHERE idRestaurant = ?');

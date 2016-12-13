@@ -1,48 +1,87 @@
-<div id="restaurant_gallery" class="restaurant_tabs_content">
-  <!--<div class="restaurant_photo_gallery"> <-->
-  <div class="pictures_by_reviewers">
-    <?php
-      include_once('../database/connection.php');
-      include_once('../database/image.php');
+<?php
+	print_r("aa");
+	
+    include_once('../database/connection.php');
+    include_once('../database/image.php');
+	
+	print_r("aa");
 
-      $images = getImageOfRestaurant($_GET['id']);
-      $first = $images[0];
-      $firstSrc ="../pics/".$first['name'];
+    $images = getImagesOfRestaurant($restaurant['id']);
 
-      foreach ($images as $image) {
-        $path = "pic_preview.src=img".$image['name'].".sec";
-        $name = "img".$image['name'];
-        $src = "../pics/".$image['name'];
-    ?>
+?>
 
-    <img onmouseover=<?=$path?> name=<?=$name?> src=<?=$src?>  alt=""/>
 
-    <?php } ?>
+<head>
+	<meta content="charset=utf-8">
+	<title>Gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <!-- img onmouseover="pic_preview.src=img2.src" name="img2" src="../pics/food_2.jpg" alt=""/>
-    <img onmouseover="pic_preview.src=img3.src" name="img3" src="../pics/food_3.jpg" alt=""/>
-    <img onmouseover="pic_preview.src=img4.src" name="img4" src="../pics/food_4.jpg" alt=""/>
-    <img onmouseover="pic_preview.src=img5.src" name="img5" src="../pics/food_5.jpg" alt=""/>
-    <img onmouseover="pic_preview.src=img6.src" name="img6" src="../pics/food_1.jpg" alt=""/>
-    <img onmouseover="pic_preview.src=img7.src" name="img7" src="../pics/food_2.jpg" alt=""/>
-    <img onmouseover="pic_preview.src=img8.src" name="img8" src="../pics/food_3.jpg" alt=""/>
-    <img onmouseover="pic_preview.src=img9.src" name="img9" src="../pics/food_4.jpg" alt=""/>
-    <img onmouseover="pic_preview.src=img10.src" name="img10" src="../pics/food_5.jpg" alt=""/-- >
-  </div>
-  <br/>
+  <!-- Syntax Highlighter -->
+ 
+	<link rel="stylesheet" href="gallery/flexslider.css" type="text/css" media="screen" />
 
-    <div class="pic_preview">
-      <img id="pic_preview" src=<?=$firstSrc?> alt=""/>
+	<!-- Modernizr -->
+  <script src="gallery/js/modernizr.js"></script>
+
+</head>
+<body class="loading">
+
+  <div id="container" class="cf">
+
+	<div id="main" role="main">
+      <section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+  	    	    <img src="gallery/gallery/images/food_1.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="gallery/gallery/images/food_2.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="gallery/gallery/images/food_3.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="gallery/gallery/images/food_4.jpg" />
+  	    		</li>
+          </ul>
+        </div>
+      </section>
+     
     </div>
 
-  <!--</div>-->
-  <?php if($_SESSION['usertype'] === "reviewer")
-  {
-  ?>
-    <form method="POST" action=""> <!--action sheet->
-      <input type="submit" value="Upload picture"/>
-    </form>
-  <?php
-  }
-  ?>
-</div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+  <script defer src="gallery/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+
+
+  <!-- Syntax Highlighter -->
+  <script type="text/javascript" src="gallery/js/shCore.js"></script>
+  <script type="text/javascript" src="gallery/js/shBrushXml.js"></script>
+  <script type="text/javascript" src="gallery/js/shBrushJScript.js"></script>
+
+  <!-- Optional FlexSlider Additions -->
+  <script src="gallery/js/jquery.easing.js"></script>
+  <script src="gallery/js/jquery.mousewheel.js"></script>
+  <script defer src="gallery/js/demo.js"></script>
+
+</body>
