@@ -21,13 +21,6 @@
 
       move_uploaded_file($tmp_name, "$uploads_dir/$name");
 
-
-  /*    $idRestaurant= $dbh->lastInsertId();
-
-    Para quando ja estiver a funcionar o user
-
-      addOwner($idRestaurant, $_SESSION['username']);
-  */
     } catch (PDOException $e) {
       die($e->getMessage());
     }
