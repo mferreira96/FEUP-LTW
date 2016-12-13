@@ -48,7 +48,7 @@
 
     }
 
-	 function createUser( $username, $name, $email, $password) {
+	 function createUser($username, $name, $email, $password) {
     global $dbh;
 
     $query = "INSERT INTO user VALUES(?,?,?,?)";

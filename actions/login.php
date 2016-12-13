@@ -8,7 +8,9 @@ if(isset($_POST['username']) && isset($_POST['password'])) //websecurity, key!
   $value = getUserByusername($_POST['username']);
   $realPass = getPassword($_POST['username']);
 
-  if ($value != false && password_verify($_POST['password'], $realPass)){
+
+  if ($value !== false && password_verify($_POST['password'], $realPass['password'])){
+
       $_SESSION['username'] = $_POST['username'];
       $_SESSION['user-logged'] = true;
       $_SESSION['userType'] = "reviewer";
@@ -19,6 +21,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) //websecurity, key!
       header('Location: ../public/restaurant_overview.php');
   }else{
     header('Location: ../public/login.php');
+
   }
 }else{
   header('Location: ../public/login.php');
