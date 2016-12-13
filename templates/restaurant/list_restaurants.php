@@ -63,7 +63,7 @@
             </div></br>
 
             <div id="search_result_score_title">
-              Score: <?=$restaurant['rate']?>
+              Score: <?=number_format($restaurant['rate'],1)?>
             </div></br>
 
             <div id="search_results_details">
