@@ -1,6 +1,6 @@
 <div id="advanced_search" class="advanced_search">
 
-	<form action ="../actions/advanced_search_name.php" method="post" enctype="multipart/form-data">
+	<form action ="../actions/advanced_search.php" method="post" enctype="multipart/form-data">
 		<div id="search_by_name_form">
 			<label for ="username">Name: </label>
 			<input type="text" name="name" id ="name">

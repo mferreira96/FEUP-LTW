@@ -3,5 +3,5 @@
   include('../database/connection.php');
   include('../database/restaurant.php');
   login_check();
-  //do I have to include anything?
+  include('../views/advanced_search.php');
 ?>

@@ -4,7 +4,38 @@
      include_once('../database/connection.php');
      include_once('../database/restaurant.php');
      include_once('../database/image.php');
-     $restaurants = getAllRestaurants();
+
+
+     if($_SESSION['userType'] === "owner"){
+       //$restaurants = all restaurants of an owner
+     }
+     else
+     {if($_SESSION['request'] === "search_name")
+       {
+        try
+        {
+          $restaurants = getRestaurantsByName($_SESSION['search_by_name']);
+        }
+        catch (PDOException $e)
+        {
+          die($e->getMessage());
+        }
+        }
+        else
+        {
+          if($_SESSION['request'] === "search_advanced")
+          {
+            $restaurants = //search by $_SESSION['search_by_name'], $_SESSION['search_by_city'] and $_SESSION['search_by_rating']
+          }
+          else
+          {
+            $restaurants = getAllRestaurants();
+          }
+        }
+       }
+
+
+  //   $restaurants = getAllRestaurants();
 
      foreach($restaurants as $restaurant) {
           $res = getImageOfRestaurant($restaurant['id']);

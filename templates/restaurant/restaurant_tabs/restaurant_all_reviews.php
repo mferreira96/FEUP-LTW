@@ -30,12 +30,32 @@
           <br>
 
           <div id="comment">
-            Comment: <?=$review['comment']?>
+              Comment: <?=$review['comment']?>
           </div>
+
+          <?php if($_SESSION['usertype'] === "owner")
+          {
+          ?>
+            <form method="POST" action="../templates/restaurant/restaurant_tabs/restaurant_review_answer.php">
+              <input type="submit" value="Answer"/>
+            </form>
+          <?php
+          }
+          ?>
+
 
         </article>
       <?php } ?>
 </section>
+<?php if($_SESSION['usertype'] === "reviewer")
+{
+?>
+  <form method="POST" action="../templates/restaurant/restaurant_tabs/restaurant_review.php">
+    <input type="submit" value="Write a review"/>
+  </form>
+<?php
+}
+?>
 
 <?php
   echo '</div>';    //part two needed around results to display them
