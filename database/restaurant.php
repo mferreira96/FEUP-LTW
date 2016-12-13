@@ -75,7 +75,7 @@
 
       $stm = $dbh->prepare('SELECT * FROM restaurant WHERE name = ?');
       $stm->execute(array($name));
-      return $stm->fetch();
+      return $stm->fetchAll();
     }
 
 
@@ -121,7 +121,7 @@
 
       $stm = $dbh->prepare('SELECT * FROM restaurant WHERE city = ? AND type_of_food= ?');
       $stm->execute(array($city, $food));
-      return $stmt->fetchAll();
+      return $stm->fetchAll();
     }
 
     function getRestaurantsByOwner($username){
@@ -129,6 +129,6 @@
 
       $stm = $dbh->prepare('SELECT * FROM restaurant, restaurantOwners WHERE restaurantOwners.username = ? AND restaurantOwners.idRestaurant = restaurant.id');
       $stm->execute(array($username));
-      return $stmt->fetchAll();
+      return $stm->fetchAll();
     }
  ?>
