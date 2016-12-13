@@ -14,7 +14,13 @@
     {
       if($_SESSION['request'] === "search_name")
       {
-        //search by name funciont
+        //echo'works!!';
+        try {
+          getRestaurantsByName($_SESSION['search_by_name']);
+        } catch (PDOException $e) {
+          die($e->getMessage());
+        }
+
       }
     }
     getAllRestaurants();
