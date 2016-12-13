@@ -47,12 +47,10 @@
         </article>
       <?php } ?>
 </section>
-<?php if($_SESSION['useTtype'] === "reviewer")
+<?php if($_SESSION['userType'] === "reviewer")
 {
 ?>
-  <form method="POST" action="../templates/restaurant/restaurant_tabs/restaurant_review.php">
-    <input type="submit" value="Write a review"/>
-  </form>
+  <div id="write_review"><a href="../public/write_review.php">Write a review</a></div>
 <?php
 }
 ?>

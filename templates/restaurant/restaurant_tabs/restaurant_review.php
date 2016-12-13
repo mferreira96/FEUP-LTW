@@ -6,9 +6,7 @@
     </div>
 
     <div id="name">
-      Name:
-    </div>
-    <div id="name_input">
+      Name: <?= $_SESSION["username"];?>
     </div>
 
     <textarea id="review_text" rows="8" cols="50">

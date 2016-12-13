@@ -1,6 +1,5 @@
 <?php
 
-  session_start();
   include_once('../database/connection.php');
   include_once('../database/review.php');
 
@@ -14,8 +13,6 @@ if(isset($_POST['submit'])){
   }
 }
 
-<<<<<<< HEAD
   header('Location: ../public/restaurant.php');
-=======
->>>>>>> origin/master
+
 ?>
