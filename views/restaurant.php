@@ -20,5 +20,6 @@
       include_once('../templates/restaurant/restaurant_tabs/restaurant_tabs_content.php');
     echo '</div>';
   echo '</div>';
+
   include_once('../templates/footer.php');
 ?>
