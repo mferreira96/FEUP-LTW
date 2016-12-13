@@ -1,11 +1,15 @@
+<?php
+      include_once('../database/connection.php');
+      include_once('../database/image.php');
+
+      $image = getImageOfUSer($_SESSION['username']);
+?>
 
 <form action="../actions/add_review.php?id=<?php echo $_GET['id']; ?>" method="post"  enctype="multipart/form-data">
 
-
-
   <div id="one_review">
     <div id="profile_picture">
-      <img src="../pics/blank-profile-picture.png" alt="profile_picture" width="100" height="100">
+      <img src="<?="../pics/". $image['name']?>" alt="profile_picture" width="100" height="100">
     </div>
 
     <div id="name">

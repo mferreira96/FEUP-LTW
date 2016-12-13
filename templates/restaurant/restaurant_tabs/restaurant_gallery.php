@@ -2,12 +2,10 @@
 
 <?php
 
-	
+
     include_once('../database/connection.php');
     include_once('../database/image.php');
 	
-
-
     $images = getImagesOfRestaurant($restaurant['id']);
 
 ?>
@@ -19,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
   <!-- Syntax Highlighter -->
- 
+
 	<link rel="stylesheet" href="../FlexSlider/flexslider.css" type="text/css" media="screen" />
 
 	<!-- Modernizr -->
@@ -38,16 +36,16 @@
 			$var = 1;
 			foreach($images as $image){
 				?>
-			
+
             <li>
   	    	    <img src=<?="../pics/". $image['name'] ?> width="500"px height="500"px/>
   	    	</li>
-			
+
 			<?php } ?>
           </ul>
         </div>
       </section>
-     
+
     </div>
 
   </div>
@@ -95,5 +93,5 @@
 <?php
 }
 ?>
-	
+
 </div>

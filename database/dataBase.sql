@@ -13,10 +13,6 @@ CREATE TABLE user (
 );
 
 
-INSERT INTO user VALUES('masterChef', 'Marcelo', 'estouaqui@gmail.com', '46ed215d4162eb1145147b7e6ffd66ea7891f172'); /* marcelo */
-INSERT INTO user VALUES('miniChef', 'João', 'seiCozinhar@gmail.com', 'a9ee6deeaced800b54d1f5fdfb3ab240e1f359a9'); /*querias*/
-
-
 CREATE TABLE restaurant (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT,
@@ -32,17 +28,12 @@ CREATE TABLE restaurant (
   telephoneNumber TEXT
 );
 
-INSERT INTO restaurant(name,rate,street,number,city,type_of_food,comment, link_to_website,telephoneNumber, opening_hours)
-    VALUES('Taskinha',0, 'rua miranda',3, 'Porto','portugues', 'Muito boa comida portuguesa', 'www.google.com', 963258741, '14h');
-INSERT INTO restaurant(name,rate,street,number,city,type_of_food,comment, link_to_website,telephoneNumber, opening_hours)
-    VALUES('Bitoque',0, 'rua vasco da gama',2, 'Lisboa','portugues', 'A melhor comida de Lisboa', 'www.google.com', 968745123, '15h');
 
 CREATE TABLE restaurantOwners(
   idRestaurant INTEGER REFERENCES restaurant,
   username INTEGER REFERENCES user
 );
 
-INSERT INTO restaurantOwners VALUES(1,1);
 
 CREATE TABLE review (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -59,8 +50,6 @@ CREATE TABLE image_user(
   name TEXT
 );
 
-INSERT INTO image_user VALUES(NULL,'masterChef','gallery_example.png');
-INSERT INTO image_user VALUES(NULL,'miniChef','random_2.png');
 
 CREATE TABLE image_restaurant(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -68,8 +57,7 @@ CREATE TABLE image_restaurant(
   name TEXT
 );
 
-INSERT INTO image_restaurant VALUES(NULL,1,'random_1.png');
-INSERT INTO image_restaurant VALUES(NULL,2,'random_2.png');
+
 
 CREATE TABLE reply(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -88,7 +76,3 @@ BEGIN
 	)
 	WHERE (restaurant.id = NEW.idRestaurant);
 END;
-
-
-INSERT INTO review VALUES(NULL,1,'miniChef', 4, 'Good space and wonderfull food');
-INSERT INTO review VALUES(NULL,1,'masterChef', 5, 'The best food i had ever tasted');

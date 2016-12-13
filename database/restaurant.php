@@ -19,8 +19,8 @@
     function addRestaurant($values){
       global $dbh;
 
-      $stm = $dbh->prepare('INSERT INTO restaurant(name,street,number,city,postcode,opening_hours,link_to_website, type_of_food,comment, telephoneNumber) VALUES ( ?,?,?,?,?,?,?,?,?, ?)');
-      $stm->execute(array($values['name'],$values['street'], $values['number'], $values['city'], $values['postcode'],  $values['opening_hours'], $values['link_to_website'],$values['type_of_food'],$values['comment'],$values['telephoneNumber'] ));
+      $stm = $dbh->prepare('INSERT INTO restaurant(name,street,number,city,postcode,opening_hours,link_to_website, type_of_food,comment, telephoneNumber, rate) VALUES ( ?,?,?,?,?,?,?,?,?, ?,?)');
+      $stm->execute(array($values['name'],$values['street'], $values['number'], $values['city'], $values['postcode'],  $values['opening_hours'], $values['link_to_website'],$values['type_of_food'],$values['comment'],$values['telephoneNumber'],0 ));
 
     }
 
