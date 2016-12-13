@@ -31,12 +31,12 @@
       <input type="hidden" name="id" value="<?=$user['username']?>">
 
       <label>Name:
-          <input type="text" name="name" value="<?=$user['name']?>">
+          <input type="text" name="name" value="<?=$user['name']?>" pattern="[a-zA-Z]+">
       </label>
       <br>
 
       <label>Email:
-          <input type="text" name="email" value="<?=$user['email']?>">
+          <input type="email" name="email" value="<?=$user['email']?>">
       </label>
       <br>
 
@@ -52,12 +52,12 @@
 
 
       <label>New password:
-          <input type="password" name="new_password" value="">
+          <input type="password" name="new_password" value="" pattern="[0-9a-zA-Z]+">
       </label>
       <br>
 
       <label>Please confirm new password:
-          <input type="password" name="confirm_new_password" value="">
+          <input type="password" name="confirm_new_password" value="" pattern="[0-9a-zA-Z]+">
       <br>
 
       </label>

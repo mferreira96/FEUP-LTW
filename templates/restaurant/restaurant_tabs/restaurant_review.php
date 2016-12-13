@@ -12,7 +12,7 @@
       Name: <?= $_SESSION["username"];?>
     </div>
 
-    <textarea id="review_text" name="comment" rows="8" cols="50">
+    <textarea id="review_text" name="comment" rows="8" cols="50" pattern="[0-9a-zA-Z\.\,\?\!]+">
     </textarea>
 
     <div id="review_rating">

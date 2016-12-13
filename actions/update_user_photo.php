@@ -10,4 +10,6 @@
     die($e->getMessage());
   }
 
+  header('Location: ../public/restaurant_overview.php');
+
  ?>
