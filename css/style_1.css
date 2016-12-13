@@ -260,6 +260,15 @@ body {
   padding-bottom: 10px;
 }
 
+#one_review{
+  background-color:rgba(255, 255,255, 1);
+  border: 1px solid white;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-top-right-adius: 10px;
+  border-top-right-radius: : 10px;
+  padding: 20px;
+}
+
 
 /*search or myrestaurant results*/
 .search_result{

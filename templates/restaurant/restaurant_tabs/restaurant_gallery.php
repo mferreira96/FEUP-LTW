@@ -36,4 +36,13 @@
     </div>
 
   <!--</div>-->
+  <?php if($_SESSION['usertype'] === "reviewer")
+  {
+  ?>
+    <form method="POST" action=""> <!--action sheet->
+      <input type="submit" value="Upload picture"/>
+    </form>
+  <?php
+  }
+  ?>
 </div>
