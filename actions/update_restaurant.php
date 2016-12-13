@@ -12,4 +12,6 @@ if(isset($_POST['submit'])){
   }
 }
 
+header('Location: ../public/restaurant_overview.php');
+
 ?>

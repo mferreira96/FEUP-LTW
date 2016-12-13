@@ -20,4 +20,11 @@
       <br>
       <div><?=$restaurant['telephoneNumber']?></div></li>
   </ul>
+  <?php if($_SESSION['userType'] === "owner")
+  {
+  ?>
+    <div id="edit_restaurant"><a href="../public/edit_restaurant.php?id=<?php echo $restaurant['id']; ?>">Edit restaurant</a></div>
+  <?php
+  }
+  ?>
 </div>

@@ -31,5 +31,6 @@
       include('restaurant_overview.php?userType=owner?');
     }
 }
+header('Location: ../public/restaurant_overview.php');
 
  ?>

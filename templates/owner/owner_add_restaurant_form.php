@@ -19,12 +19,6 @@
         <option value="others">Others</option>
       </select>
       <br>
-      <label for ="restaurant_type_of_food_others">Type of food:</label>
-      <input type="text" name="type_of_food" id="restaurant_type_of_food_others"></input> <!-- should appear if others was selected-->
-      <br>
-      <!--<label for ="restaurant_address">Address</label>
-      <br>-->
-      <br>
       <label for ="telephoneNumber">Telephone number:</label>
       <input type="text" name="telephoneNumber" id="phone" pattern="\d{9}|\d{3}-\d{3}-\d{3}"></input>
       <br>

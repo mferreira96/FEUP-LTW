@@ -24,11 +24,11 @@
       </label>
       <br>
       <label>Link to website:
-          <input type="text" name="link" value="<?=$restaurant['link_to_website']?>">
+          <input type="text" name="link_to_website" value="<?=$restaurant['link_to_website']?>">
       </label>
       <br>
       <label>Opening Time:
-          <input type="text" name="open" value="<?=$restaurant['opening_hours']?>" >
+          <input type="text" name="opening_hours" value="<?=$restaurant['opening_hours']?>" >
       </label>
       <br>
       <input type="submit" name="submit" value="Save" id="buttonSave">

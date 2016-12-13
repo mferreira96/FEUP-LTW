@@ -13,5 +13,5 @@ if(isset($_POST['submit'])){
   }
 }
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+header('Location: ../public/restaurant_overview.php');
 ?>
