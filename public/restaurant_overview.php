@@ -5,8 +5,21 @@
   include('../database/restaurant.php');
   login_check();
   $userType = userType_check();
-  getAllRestaurants();
+  if($_SESSION['userType'] === "owner"){
+    //function get all restaurants of an owner
+  }
+  else
+  {
+    if($_SESSION['userType'] === "reviewer")
+    {
+      if($_SESSION['request'] === "search")
+      {
+        //search by name funciont
+      }
+    }
+    getAllRestaurants();
+  }
 
-  include('../views/result_restaurants.php');
+  include('../public/restaurant_overview.php');
 
 ?>
