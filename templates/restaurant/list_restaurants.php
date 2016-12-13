@@ -38,9 +38,8 @@
         }
        }
 
-  //   $restaurants = getAllRestaurants();
 
-  //  print_r($restaurants);
+
      foreach($restaurants as $restaurant) {
           $res = getImagesOfRestaurant($restaurant['id']);
 
@@ -69,7 +68,6 @@
             <div id="search_results_details">
               <p><a href="restaurant.php?id=<?php echo $restaurant['id']; ?>">Details</a></p>
             </div>
-            <!--<input type="button" id="search_results_see_more" value="see more">-->
             </br>
             </br>
           </article>
