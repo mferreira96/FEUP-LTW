@@ -32,18 +32,14 @@
       <section class="slider">
         <div class="flexslider">
           <ul class="slides">
+		  <?php
+			$var = 1;
+			foreach($images as $image){
+				?>
+			}
             <li>
-  	    	    <img src="gallery/gallery/images/food_1.jpg" />
-  	    		</li>
-  	    		<li>
-  	    	    <img src="gallery/gallery/images/food_2.jpg" />
-  	    		</li>
-  	    		<li>
-  	    	    <img src="gallery/gallery/images/food_3.jpg" />
-  	    		</li>
-  	    		<li>
-  	    	    <img src="gallery/gallery/images/food_4.jpg" />
-  	    		</li>
+  	    	    <img src=<?="../pics/". $image['name']?> />
+  	    	</li>
           </ul>
         </div>
       </section>
