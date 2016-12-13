@@ -6,7 +6,13 @@
 
   try {
     if (isset($_POST['submit'])) {
-      updateUser($_POST);
+      $realPass = getPassword($_SESSION['username']);
+
+      if(password_verify($_POST['old_password'], $realPass['password'])){
+        if($_POST['confirm_new_password'] === $_POST['new_password']){
+          updateUser($_POST);
+        }
+      }
     }
   } catch (PDOException $e) {
     die($e->getMessage());
