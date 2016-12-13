@@ -44,31 +44,21 @@
 <?php
   if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === true){
     echo'<label>Old password :
-        <input type="text" name="old_password" value="">
+        <input type="password" id="old_password" name="old_password" value="">
     </label>
     <br>';
-    include_once('../../database/connection.php');
-    include_once('../../database/user.php');
-
-    $username = $_SESSION['username'];
-    $realPass = getPassword($_POST['username']);
-
-    password_verify($_POST['old_password'], $realPass);
   }
 ?>
 
 
       <label>New password:
-          <input type="Password" name="new_password" value="">
+          <input type="password" name="new_password" value="">
       </label>
       <br>
 
       <label>Please confirm new password:
           <input type="password" name="confirm_new_password" value="">
       <br>
-
-  <!--    <label>Password:
-          <input type="text" name="email" value="">-->
 
       </label>
       <br>
