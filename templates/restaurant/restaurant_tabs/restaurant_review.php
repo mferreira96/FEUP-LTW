@@ -27,6 +27,6 @@
       <label for ="rating_5">5</label>
     </div>
 
-    <input type="submit" value="Send"/>
+    <input type="submit" name="submit" value="Send"/>
   </div>
 </form>
