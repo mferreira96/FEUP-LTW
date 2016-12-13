@@ -1,5 +1,8 @@
 
 <form action="../actions/add_review.php" method="post"  enctype="multipart/form-data">
+  <?php
+    $_POST['idRestaurant'] = $_GET['id'];
+   ?>
   <div id="one_review">
     <div id="profile_picture">
       <img src="../pics/blank-profile-picture.png" alt="profile_picture" width="100" height="100">
@@ -9,7 +12,7 @@
       Name: <?= $_SESSION["username"];?>
     </div>
 
-    <textarea id="review_text" rows="8" cols="50">
+    <textarea id="review_text" name="comment" rows="8" cols="50">
     </textarea>
 
     <div id="review_rating">

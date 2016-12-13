@@ -6,8 +6,9 @@
 
 if(isset($_POST['submit'])){
   try {
-    addReview($idRestaurant, $username, $rate, $comment);
-    //modificar para as labels respetiveas
+
+    addReview($_POST['idRestaurant'], $_SESSION['username'], $_POST['rating'], $_POST['comment']);
+
   } catch (PDOException $e) {
     die($e->getMessage());
   }
