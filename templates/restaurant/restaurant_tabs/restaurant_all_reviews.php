@@ -36,12 +36,11 @@
           <?php if($_SESSION['userType'] === "owner")
           {
           ?>
-            <form method="POST" action="../templates/restaurant/restaurant_tabs/restaurant_review_answer.php">
-              <input type="submit" value="Answer"/>
-            </form>
+            <div id="reply"><a href="../public/reply_review.php">Answer</a></div>
           <?php
           }
           ?>
+          </div>
 
 
         </article>

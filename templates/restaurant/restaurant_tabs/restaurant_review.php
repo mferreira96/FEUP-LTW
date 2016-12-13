@@ -27,7 +27,6 @@
       <input id="rating_5" type="radio" name="rating" value="5">
       <label for ="rating_5">5</label>
     </div>
-
     <input type="submit" name="submit" value="Send"/>
-  </div>
+    </div>
 </form>
