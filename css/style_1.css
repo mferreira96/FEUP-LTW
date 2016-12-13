@@ -311,6 +311,19 @@ body {
   font-weight: 600;
 }
 
+#advanced_search{
+  border: 0.1px solid white;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color:rgba(255, 255,255, 1);
+  padding: 20px;
+}
+
+#advanced_search input{
+  margin: 10px;
+}
+
 /*add restaurant*/
 
 #add_restaurant_form{
@@ -319,6 +332,7 @@ body {
   -moz-border-top-right-radius: 10px;
   border-top-right-radius: 10px;
   background-color:rgba(255, 255,255, 1);
+  padding: 20px;
 }
 
 #add_restaurant h3{
@@ -328,10 +342,6 @@ body {
 #add_restaurant > p{
   font-size: 12px;
   padding-left: 10px;
-}
-
-#add_restaurant_form{
-  padding: 20px;
 }
 
 #add_restaurant_form *{
