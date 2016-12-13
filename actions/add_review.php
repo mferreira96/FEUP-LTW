@@ -6,8 +6,8 @@
 
 if(isset($_POST['submit'])){
   try {
-
-    addReview($_POST['idRestaurant'], $_SESSION['username'], $_POST['rating'], $_POST['comment']);
+    print_r($_POST);
+    addReview($_GET['id'], $_SESSION['username'], $_POST['rating'], $_POST['comment']);
 
   } catch (PDOException $e) {
     die($e->getMessage());

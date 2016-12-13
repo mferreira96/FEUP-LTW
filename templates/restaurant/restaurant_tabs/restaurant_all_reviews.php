@@ -50,7 +50,7 @@
 <?php if($_SESSION['userType'] === "reviewer")
 {
 ?>
-  <div id="write_review"><a href="../public/write_review.php">Write a review</a></div>
+  <div id="write_review"><a href="../public/write_review.php?id=<?php echo $restaurant['id']; ?>">Write a review</a></div>
 <?php
 }
 ?>

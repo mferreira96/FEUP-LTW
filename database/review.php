@@ -33,7 +33,7 @@
   function addReview($idRestaurant, $username, $rate, $comment){
     global $dbh;
 
-    $stm = $dbh->prepare('INSERT INTO reply VALUES (NULL,?,?,?,?)');
+    $stm = $dbh->prepare('INSERT INTO review VALUES (NULL,?,?,?,?)');
     $stm->execute(array($idRestaurant, $username, $rate, $comment));
   }
 
