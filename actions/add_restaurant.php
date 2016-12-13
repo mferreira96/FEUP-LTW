@@ -13,18 +13,17 @@
 
         addRestaurant($variables);
         $idRestaurant= $dbh->lastInsertId();
+
         addOwner($idRestaurant, $_SESSION['username']);
-        
+
         $tmp_name = $_FILES["restaurant_picture"]["tmp_name"];
         $name = basename($_FILES["restaurant_picture"]["name"]);
 
+        if(strlen($name)!==0){
+          addImageRestaurant($name, $idRestaurant);
 
-
-
-        addImageRestaurant($name, $id);
-
-        move_uploaded_file($tmp_name, "$uploads_dir/$name");
-
+          move_uploaded_file($tmp_name, "$uploads_dir/$name");
+        }
       } catch (PDOException $e) {
         die($e->getMessage());
       }
