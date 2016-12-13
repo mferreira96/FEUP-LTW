@@ -36,10 +36,11 @@
 			$var = 1;
 			foreach($images as $image){
 				?>
-			}
+			
             <li>
-  	    	    <img src=<?="../pics/". $image['name']?> />
+  	    	    <img src=<?="../pics/". $image['name'] ?> width="150" height="150" />
   	    	</li>
+			<?php } ?>
           </ul>
         </div>
       </section>
