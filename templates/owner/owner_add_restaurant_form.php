@@ -26,7 +26,7 @@
         <legend>Address</legend>
           <div id="restaurant_address">
           <label for ="restaurant_address_street">Street:</label>
-          <input type="text" name="street" id="restaurant_address_street" required="required" pattern="[a-zA-Z]+">
+          <input type="text" name="street" id="restaurant_address_street" required="required" pattern="[a-zA-Z\s]+">
           <br>
           <label for ="restaurant_address_number">Number:</label>
           <input type="text" name="number" id="restaurant_address_number" required="required" pattern="[0-9]+">

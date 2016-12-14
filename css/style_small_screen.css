@@ -26,10 +26,10 @@ body {
   background-color:rgba(255, 255, 255, 0.9);
   margin: 0 !important;
   padding: 0;
-  min-height: 70vh; /*has to be changed as soon as footer is changed*/
+  min-height: 70vh;
 }
 
-#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover, #login_message a:hover, .logout_message a:hover, #external_website a:hover, #see_all_results a:hover, edit_restaurant a:hover{
+#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover, #login_message a:hover, .logout_message a:hover, #external_website a:hover, #see_all_results a:hover, #edit_restaurant a:hover, #write_review a:hover, #reply a:hover{
   color: grey;
 }
 
@@ -38,7 +38,7 @@ body {
   color: black;
 }
 
-#see_all_results a{
+#see_all_results a, #write_review a, #reply a{
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -102,9 +102,6 @@ body {
 
 /*tabs*/
 
-.tabs{
-}
-
 .tabs_content{
   background-color:rgba(255, 255,255, 1);
 }
@@ -113,9 +110,6 @@ body {
   clear: both;
   text-align: center;
   padding: 1vh 0;
-}
-
-.tab_links:after{
 }
 
 .tab_links li{
@@ -144,8 +138,6 @@ body {
 }
 
 /*tabs content style each*/
-#restaurant_info li{
-}
 
 #restaurant_info li div{
  padding: 1vh 5vw;
@@ -204,14 +196,20 @@ body {
 
 #one_review{
   background-color:rgba(255, 255,255, 1);
-  padding: 2vh 2vw:;
+  padding: 2vh 2vw;
 }
 
 #review_text{
   max-width: 90vw;
+
 }
 
-/*search or myrestaurant results*/
+#reply_review h3{
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/*search or myrestaurant results and other forms*/
 .search_result{
   background-color:rgba(255, 255,255, 1);
   border: solid white;
@@ -263,12 +261,21 @@ body {
   font-weight: 600;
 }
 
-#advanced_search{
+#advanced_search, #reply_review, #register_form, #edit_restaurant{
   background-color:rgba(255, 255,255, 1);
   margin-left: 5vw;
 }
 
-#advanced_search input{
+#reply_text{
+  width: 80vw;
+}
+
+#reply_review h3, #register_form h3, #edit_restaurant h3, #edit_user h3{
+  padding: 2vh 2vw;
+  text-align: center;
+}
+
+#advanced_search input, #register_form input, #edit_restaurant input{
   margin: 2vh 2vw;
 }
 /*add restaurant*/

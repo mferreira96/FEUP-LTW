@@ -3,13 +3,11 @@
     if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
       echo'<h3>Create profile</h3>';
     }
-
-
    ?>
 
   <form action="../actions/update_user_photo.php" method="post"  enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?=$user['username']?>">
-
+      <h3>Edit profile</h3>
       <label>Photo:
           <input type="file" name="name" value="<?=$image['name']?>">
       </label>

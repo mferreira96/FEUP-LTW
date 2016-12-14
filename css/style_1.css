@@ -36,7 +36,7 @@ body {
 }
 
 /*would be nice to select all ankers for hover and acitve*/
-#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover, #login_message a:hover, .logout_message a:hover, #external_website a:hover, #see_all_results a:hover, #edit_restaurant a:hover{
+#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover, #login_message a:hover, .logout_message a:hover, #external_website a:hover, #see_all_results a:hover, #edit_restaurant a:hover, #write_review a:hover, #reply a:hover{
   color: grey;
 }
 
@@ -45,7 +45,7 @@ body {
   color: black;
 }
 
-#see_all_results a{
+#see_all_results a, #write_review a, #reply a{
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -278,7 +278,7 @@ body {
 }
 
 
-/*search or myrestaurant results*/
+/*search or myrestaurant results and some other forms*/
 .search_result{
   background-color:rgba(255, 255,255, 1);
   border: 1px solid white;
@@ -328,7 +328,7 @@ body {
   font-weight: 600;
 }
 
-#advanced_search{
+#advanced_search, #reply_review, #register_form, #edit_restaurant{
   border: 0.1px solid white;
   -webkit-border-top-right-radius: 10px;
   -moz-border-top-right-radius: 10px;
@@ -337,7 +337,16 @@ body {
   padding: 20px;
 }
 
-#advanced_search input{
+#reply_text{
+  width: 500px;
+}
+
+#reply_review h3, #register_form h3, #edit_restaurant h3, #edit_user h3{
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#advanced_search input, #register_form input, #edit_restaurant input{
   margin: 10px;
 }
 
@@ -366,10 +375,6 @@ body {
 }
 
 #restaurant_address *{
-  /*border: 0.1px solid black;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;*/
   margin-left: 20px;
 }
 
@@ -402,7 +407,6 @@ body {
 #register_profile{
   margin-left: 150px;
   margin-right: 150px;
-
 }
 
 /*logout/logou*/

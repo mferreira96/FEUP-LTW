@@ -1,5 +1,5 @@
  <?php
-  include_once('../templates/header.php');
+  include_once('../templates/header_gallery.php');
   echo '<div class="content">';
   include('../helpers/menu.php');
 

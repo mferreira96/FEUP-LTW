@@ -1,4 +1,5 @@
 <div id="edit_restaurant">
+  <h3>Edit restaurant</h3>
   <form action="../actions/update_restaurant.php" method="post"  enctype="multipart/form-data">
 
       <input type="hidden" name="id" value="<?=$restaurant['id']?>">
@@ -16,7 +17,7 @@
       </label>
       <br>
       <label>Street:
-          <input type="text" name="street" value="<?=$restaurant['street']?>" pattern="[a-zA-Z]+">
+          <input type="text" name="street" value="<?=$restaurant['street']?>" pattern="[a-zA-Z\s]+">
       </label>
       <br>
       <label>Post Code:

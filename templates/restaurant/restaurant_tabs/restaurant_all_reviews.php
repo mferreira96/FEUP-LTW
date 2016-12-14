@@ -8,7 +8,7 @@
 	include_once('../database/image.php');
 
     $reviews =  getAllReviewsFromRestaurant($restaurant['id']);
-	
+
 
 
 ?>
@@ -44,9 +44,7 @@
           <?php
           }
           ?>
-          </div>
-
-
+  
         </article>
       <?php } ?>
 </section>
