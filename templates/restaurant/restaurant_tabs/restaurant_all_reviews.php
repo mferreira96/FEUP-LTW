@@ -35,12 +35,12 @@
               Comment: <?=$review['comment']?>
           </div>
 
-          <div id="see_replies"><a href="../public/see_replies.php?id=<?php echo $review['id']; ?>">See answers</a></div>
+          <div id="see_replies"><a href="../public/see_replies.php?id=<?php echo $review['idReview']; ?>">See answers</a></div>
 
           <?php if($_SESSION['userType'] === "owner")
           {
           ?>
-            <div id="reply"><a href="../public/reply_review.php?id=<?php echo $review['id']; ?>">Answer</a></div>
+            <div id="reply"><a href="../public/reply_review.php?id=<?php echo $review['idReview']; ?>">Answer</a></div>
           <?php
           }
           ?>

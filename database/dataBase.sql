@@ -36,7 +36,7 @@ CREATE TABLE restaurantOwners(
 
 
 CREATE TABLE review (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  idReview INTEGER PRIMARY KEY AUTOINCREMENT,
   idRestaurant INTEGER REFERENCES restaurant,
   username INTEGER REFERENCES user,
   rating INTEGER,
