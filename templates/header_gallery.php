@@ -10,6 +10,7 @@
 						crossorigin="anonymous"></script>
 		<script type="text/javascript" src="../templates/jquery/tabs.js"></script>
 		<script type="text/javascript" src="../templates/jquery/maps.js"></script>
+		<script type="text/javascript" src="../templates/jquery/gallery.js"></script>
 		<script type="text/javascript" src="../templates/jquery/register.js"></script>
     <script src="../FlexSlider/Gallery/js/modernizr.js"></script>
 		<link rel="stylesheet" href="../css/reset.css">

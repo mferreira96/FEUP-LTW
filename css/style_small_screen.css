@@ -29,11 +29,11 @@ body {
   min-height: 70vh;
 }
 
-#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover, #login_message a:hover, .logout_message a:hover, #external_website a:hover, #see_all_results a:hover, #edit_restaurant a:hover, #write_review a:hover, #reply a:hover, #see_replies a:hover{
+#menu_reviewer a:hover , #menu_owner a:hover, #search_results_details a:hover, #restaurant_tabs a:hover, .link_to_login a:hover, #login_message a:hover, .logout_message a:hover, #external_website a:hover, #see_all_results a:hover, #edit_restaurant a:hover, #write_review a:hover, #reply a:hover, #see_replies a:hover, #upload_picture a:hover{
   color: grey;
 }
 
-#menu_reviewer a , #menu_owner a, #search_results_details a, .link_to_login a, #login_message a, .logout_message a, #edit_restaurant a{
+#menu_reviewer a , #menu_owner a, #search_results_details a, .link_to_login a, #login_message a, .logout_message a, #edit_restaurant a, #upload_picture a{
   text-decoration: none;
   color: black;
 }
@@ -268,7 +268,7 @@ body {
   font-weight: 600;
 }
 
-#advanced_search, #reply_review, #register_form, #edit_restaurant{
+#advanced_search, #reply_review, #register_form, #edit_restaurant, #one_upload{
   background-color:rgba(255, 255,255, 1);
   margin-left: 5vw;
 }
@@ -277,7 +277,7 @@ body {
   width: 80vw;
 }
 
-#reply_review h3, #register_form h3, #edit_restaurant h3, #edit_user h3{
+#reply_review h3, #register_form h3, #edit_restaurant h3, #edit_user h3, #one_upload h3, #advanced_search h3{
   padding: 2vh 2vw;
   text-align: center;
 }
@@ -320,10 +320,6 @@ body {
 /*edit profile*/
 
 #edit_user{
-/*  border: 1px solid white;
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-top-right-adius: 10px;
-  border-top-right-radius: : 10px;*/
   background-color:rgba(255, 255,255, 1);
   padding: 1vh 1vw;
 }
@@ -333,7 +329,7 @@ body {
 }
 
 
-/*logout/logou*/
+/*logout/logout*/
 
 .logout_message, .login_message{
   max-width: 90vw;
