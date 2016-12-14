@@ -9,11 +9,11 @@
       <input type="hidden" name="id" value="<?=$user['username']?>">
       <h3>Edit profile</h3>
       <label>Photo:
-          <input type="file" name="name" value="<?=$image['name']?>">
+          <input type="file" name="name" value="">
       </label>
 
       <br>
-      <input type="submit" name="submit" value="Change" id="buttonSave">
+      <input type="submit" name="submitPhoto" value="Change" id="buttonSave">
   </form>
 
 

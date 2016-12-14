@@ -50,7 +50,7 @@
       <textarea id="restaurant_comment" name="comment" rows="4" cols="60" pattern="[0-9a-zA-Z\.\,\?\!]+"></textarea>
       <br>
       <label for ="restaurant_picture">Picture of restaurant:</label>
-      <input type="file" name="restaurant_picture" id="restaurant_picture"></input>
+      <input type="file" name="restaurant_picture" required="required" id="restaurant_picture"></input>
       <br>
     <input type="submit" name="add" value="Add restaurant">
     </form>

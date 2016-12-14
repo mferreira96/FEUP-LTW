@@ -5,9 +5,13 @@
 
     include_once('../database/connection.php');
     include_once('../database/image.php');
+<<<<<<< HEAD
 
 
 
+=======
+	
+>>>>>>> origin/master
     $images = getImagesOfRestaurant($restaurant['id']);
 
 ?>
@@ -18,6 +22,10 @@
 	<title>Gallery</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
+<<<<<<< HEAD
+=======
+  <!-- Syntax Highlighter -->
+>>>>>>> origin/master
 
 	<link rel="stylesheet" href="../FlexSlider/flexslider.css" type="text/css" media="screen" />
 

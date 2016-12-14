@@ -7,6 +7,7 @@
     include_once('../database/user.php');
     include_once('../database/image.php');
     $username = $_SESSION['username'];
+
     try {
       $user = getUserByusername($username);
       $image = getImageOfUSer($username);

@@ -38,8 +38,6 @@
         }
        }
 
-
-
      foreach($restaurants as $restaurant) {
           $res = getImagesOfRestaurant($restaurant['id']);
 

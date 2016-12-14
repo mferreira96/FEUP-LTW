@@ -5,7 +5,7 @@
 
   $uploads_dir = "../pics";
   try {
-    /// ainda nao esta funcional
+
     $tmp_name = $_FILES["name"]["tmp_name"];
     $name = basename($_FILES["name"]["name"]);
 
@@ -15,6 +15,6 @@
   } catch (PDOException $e) {
     die($e->getMessage());
   }
-  
+
   header('Location: ../public/restaurant_overview.php');
  ?>
