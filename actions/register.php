@@ -5,15 +5,20 @@ include_once('../database/user.php');
 include_once('../database/image.php');
 
 if(isset($_POST['submit'])){
-  try {
-    $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+  if($_POST['password']===$_POST['confirm']){
+    try {
 
-    createUser($_POST['username'], $_POST['name'], $_POST['email'], $pass);
+      $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    addImageUser('blank-profile-picture.png',$_POST['username']);
+      createUser($_POST['username'], $_POST['name'], $_POST['email'], $pass);
 
-  } catch (PDOException $e) {
-    die($e->getMessage());
+      addImageUser('blank-profile-picture.png',$_POST['username']);
+
+    } catch (PDOException $e) {
+      die($e->getMessage());
+    }
+  }else{
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
   }
 }
 
