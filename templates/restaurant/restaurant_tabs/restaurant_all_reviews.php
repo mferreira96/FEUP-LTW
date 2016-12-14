@@ -40,7 +40,7 @@
           <?php if($_SESSION['userType'] === "owner")
           {
           ?>
-            <div id="reply"><a href="../public/reply_review.php">Answer</a></div>
+            <div id="reply"><a href="../public/reply_review.php?id=<?php echo $review['id']; ?>">Answer</a></div>
           <?php
           }
           ?>
@@ -48,13 +48,12 @@
         </article>
       <?php } ?>
 </section>
-<?php if($_SESSION['userType'] === "reviewer")
-{
-?>
+
+<?php if($_SESSION['userType'] === "reviewer"){ ?>
+
   <div id="write_review"><a href="../public/write_review.php?id=<?php echo $restaurant['id']; ?>">Write a review</a></div>
-<?php
-}
-?>
+
+<?php } ?>
 
 <?php
   echo '</div>';    //part two needed around results to display them
