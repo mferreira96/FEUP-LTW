@@ -8,8 +8,20 @@
     include_once('../database/image.php');
 
     $images =  getImagesOfRestaurant($restaurant['id']);
-   ?>
-  <div id="restaurant_picture">
-   <img src=<?="../pics/". $images[0]['name'] ?> alt="restaurant_picture" width="400" height="200">
-  </div>
+
+
+    if(empty($images))
+    {
+      echo '<br>';
+
+    }
+    else
+    {
+     ?>
+      <div id="restaurant_picture">
+       <img src=<?="../pics/". $images[0]['name'] ?> alt="restaurant_picture" width="400" height="200">
+      </div>
+    <?php
+    }
+    ?>
 </div>
