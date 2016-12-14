@@ -1,4 +1,4 @@
-<div id="edit_user">
+<div id="edit_user" class="edit_user">
   <?php
     if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
       echo'<h3>Create profile</h3>';
@@ -17,7 +17,7 @@
   </form>
 
 
-  <form action="../actions/update_user.php" method="post"  enctype="multipart/form-data">
+  <form id="update" action="../actions/update_user.php" method="post"  enctype="multipart/form-data">
     <?php
       if((isset($_SESSION['user-logged']) && $_SESSION['user-logged']) === false){
         echo'<label>Username:
