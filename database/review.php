@@ -22,7 +22,7 @@
 
     $stm = $dbh->prepare('SELECT * FROM reply WHERE idReview = ?');
     $stm->execute(array($idReview));
-    return $stm->fetch();
+    return $stm->fetchAll();
   }
 
 
