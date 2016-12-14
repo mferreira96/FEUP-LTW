@@ -37,6 +37,8 @@
               Comment: <?=$review['comment']?>
           </div>
 
+          <div id="see_replies"><a href="../public/see_replies.php">See answers</a></div>
+
           <?php if($_SESSION['userType'] === "owner")
           {
           ?>
@@ -44,7 +46,7 @@
           <?php
           }
           ?>
-  
+
         </article>
       <?php } ?>
 </section>
