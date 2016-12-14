@@ -9,8 +9,6 @@
 
     $reviews =  getAllReviewsFromRestaurant($restaurant['id']);
 
-
-
 ?>
 
 <section class="listReviews">
@@ -37,7 +35,7 @@
               Comment: <?=$review['comment']?>
           </div>
 
-          <div id="see_replies"><a href="../public/see_replies.php">See answers</a></div>
+          <div id="see_replies"><a href="../public/see_replies.php?id=<?php echo $review['id']; ?>">See answers</a></div>
 
           <?php if($_SESSION['userType'] === "owner")
           {

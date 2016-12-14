@@ -268,7 +268,7 @@ body {
   font-weight: 600;
 }
 
-#advanced_search, #reply_review, #register_form, #edit_restaurant, #one_upload{
+#advanced_search, #reply_review, #register_form, #edit_restaurant, #one_upload, .display_answers{
   background-color:rgba(255, 255,255, 1);
   margin-left: 5vw;
 }
@@ -277,7 +277,7 @@ body {
   width: 80vw;
 }
 
-#reply_review h3, #register_form h3, #edit_restaurant h3, #edit_user h3, #one_upload h3, #advanced_search h3{
+#reply_review h3, #register_form h3, #edit_restaurant h3, #edit_user h3, #one_upload h3, #advanced_search h3, .display_answers h3{
   padding: 2vh 2vw;
   text-align: center;
 }
