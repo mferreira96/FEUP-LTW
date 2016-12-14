@@ -277,6 +277,10 @@ body {
   padding: 20px;
 }
 
+.slides li img{
+  margin-left: 20px;
+}
+
 
 /*search or myrestaurant results and some other forms*/
 .search_result{

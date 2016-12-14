@@ -9,7 +9,7 @@
       echo '<h3>Reviews</h3>';
       include("../templates/restaurant/restaurant_tabs/restaurant_all_reviews.php");
       echo '<h3>Gallery</h3>';
-    //  include("../templates/restaurant/restaurant_tabs/restaurant_gallery.php");
+      include("../templates/restaurant/restaurant_tabs/restaurant_gallery.php");
     echo'</div>';
   echo'</div>';
 ?>
