@@ -209,6 +209,13 @@ body {
   text-align: center;
 }
 
+.slides li img{
+  margin-left: 2vw;
+}
+
+#restaurant_picture img{
+  max-width: 90vw;
+}
 /*search or myrestaurant results and other forms*/
 .search_result{
   background-color:rgba(255, 255,255, 1);

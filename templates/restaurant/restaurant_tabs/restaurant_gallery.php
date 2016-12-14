@@ -5,34 +5,11 @@
 
     include_once('../database/connection.php');
     include_once('../database/image.php');
-<<<<<<< HEAD
 
-
-
-=======
-	
->>>>>>> origin/master
     $images = getImagesOfRestaurant($restaurant['id']);
 
 ?>
 
-
-<!--<head>
-	<meta content="charset=utf-8">
-	<title>Gallery</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-<<<<<<< HEAD
-=======
-  <!-- Syntax Highlighter -->
->>>>>>> origin/master
-
-	<link rel="stylesheet" href="../FlexSlider/flexslider.css" type="text/css" media="screen" />
-
-
-  <script src="../FlexSlider/Gallery/js/modernizr.js"></script>
-
-</head> -->
 <div class="loading">
 
   <div id="container" class="cf">
@@ -94,10 +71,9 @@
 </div>
 
 <div id="n">
-<?php if($_SESSION['userType'] === "owner")
+<?php if($_SESSION['userType'] === "reviewer")
 {
 ?>
-
   <div id="upload_picture"><a href="../public/upload_restaurant_picture.php?id=<?php echo $_GET['id'];?>">Upload a new picture</a></div>
 <?php
 }
